@@ -1,0 +1,2 @@
+class JobLikesController < ApplicationController
+end
