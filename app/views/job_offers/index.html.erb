@@ -1,0 +1,25 @@
+<div class="cards-container">
+  <% @job_offers.each do |job_offer| %>
+    <div class="job-offer-card">
+
+        <div class="job-offer-photo-category">
+          <%# <%= cl_image_tag artwork.photo.key, height: 300, width: 400, crop: :fill %> %>
+        </div>
+
+        <ul style="list-style: none;padding: 15px;margin: 20px 0;">
+          <li class="mb-2"><strong><%= job_offer.job_title %></strong></li>
+          <li class="mb-1"><%= job_offer.skills_wanted %></li>
+          <li class="mb-1"><%= job_offer.city %></li>
+          <li class="mb-1"><%= job_offer.contracttype %></li>
+          <li class="mb-1"><%= job_offer.description %></li>
+          <li>
+            <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-ghost" %>
+          </li>
+          <li><% job_offer.question1 %></li>
+          <li><% job_offer.question2 %></li>
+          <li><% job_offer.question3 %></li>
+        </ul>
+
+    </div>
+  <% end %>
+</div>
