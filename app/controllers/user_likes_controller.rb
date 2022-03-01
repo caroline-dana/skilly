@@ -1,20 +1,15 @@
 class UserLikesController < ApplicationController
   def create
-    @user_like = UserLike.new(user_like_params)
-    @job_offer = JobOffer.find(params[:job_offer_id])
-    @user_like.job_offer = @job_offer
+    @user_like = UserLike.new(job_offer: JobOffer.find(params[:job_offer_id]))
+    @user_like.user = current_user
+    @user_like.status = 'pending'
 
-    if @user_like.status == true
-      @user_like.save
-      redirect_to job_offer_path
+    if @user_like.save
+      redirect_to job_offers_path
     else
-      redirect_to job_offer_path
+      redirect_to job_offers_path
     end
   end
 
-  private
 
-  def user_like_params
-    params.require(:user_like).permit(:status)
-  end
 end

@@ -8,7 +8,7 @@
 
         <ul style="list-style: none;padding: 15px;margin: 20px 0;">
           <li class="mb-2"><strong><%= job_offer.job_title %></strong></li>
-          <li class="mb-1"><%= job_offer.skills_wanted %></li>
+          <li class="mb-1"><%#= job_offer.skills_wanted %></li>
           <li class="mb-1"><%= job_offer.city %></li>
           <li class="mb-1"><%= job_offer.contracttype %></li>
           <li class="mb-1"><%= job_offer.description %></li>
@@ -20,6 +20,7 @@
           <li><% job_offer.question3 %></li>
         </ul>
 
+        <%= link_to 'LIKE !!', job_offer_user_likes_path(job_offer), method: :post %>
     </div>
   <% end %>
 </div>
