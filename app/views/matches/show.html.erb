@@ -1,0 +1,12 @@
+<h1>It's a match !</h1>
+
+
+
+<h3>Veuillez répondre aux questions ci-dessous avant de réserver votre call avec le recruteur !</h3>
+
+<%= simple_form_for @match do |f| %>
+  <%= f.input :answer1, label: @match.job_offer.question1 %>
+  <%= f.input :answer2, label: @match.job_offer.question2 %>
+  <%= f.input :answer3, label: @match.job_offer.question3 %>
+  <%= f.submit "Envoyer mes réponses", class: "btn btn-primary" %>
+<% end %>
