@@ -1,0 +1,14 @@
+.navbar-footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
