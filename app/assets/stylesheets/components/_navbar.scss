@@ -1,12 +1,32 @@
-.navbar-lewagon {
+.navbar-skilly {
   justify-content: space-between;
-  background: white;
+
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar-skilly .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar-skilly .navbar-brand img {
   width: 40px;
+}
+
+.navbar-skilly .nav-link a {
+  color: black;
+}
+
+.logo {
+  color: white;
+  text-shadow: 1px 1px 2px rgb(248, 210, 217);
+
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
 }
