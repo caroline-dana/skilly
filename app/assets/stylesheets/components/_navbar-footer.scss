@@ -1,6 +1,9 @@
 .navbar-footer{
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  bottom: 0px;
+  width: 100vw;
 }
 
 a {
