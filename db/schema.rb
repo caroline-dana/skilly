@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_01_105554) do
+ActiveRecord::Schema.define(version: 2022_03_01_135954) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,10 @@ ActiveRecord::Schema.define(version: 2022_03_01_105554) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "name"
+    t.integer "employees"
+    t.string "city"
+    t.string "recruiter_message"
   end
 
   create_table "job_likes", force: :cascade do |t|
@@ -42,7 +46,11 @@ ActiveRecord::Schema.define(version: 2022_03_01_105554) do
     t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "skills_wanted"
+    t.string "soft_skills"
+    t.string "hard_skills"
+    t.string "languages"
+    t.integer "years_of_experience"
+    t.string "values"
     t.index ["company_id"], name: "index_job_offers_on_company_id"
   end
 
@@ -81,7 +89,11 @@ ActiveRecord::Schema.define(version: 2022_03_01_105554) do
     t.string "first_name"
     t.string "last_name"
     t.string "job_wanted"
-    t.string "skills"
+    t.string "soft_skills"
+    t.string "hard_skills"
+    t.string "languages"
+    t.integer "years_of_experience"
+    t.string "values"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
