@@ -12,4 +12,16 @@ class JobOffer < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+    def soft_skills
+      skills.where(category: 'soft_skills')
+    end
+
+    def hard_skills
+      skills.where(category: 'hard_skills')
+    end
+
+    def values
+      skills.where(category: 'values')
+    end
 end
