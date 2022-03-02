@@ -109,6 +109,16 @@ ActiveRecord::Schema.define(version: 2022_03_02_151809) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  
+  create_table "meetings", force: :cascade do |t|
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_meetings_on_user_id"
+  end
 
   create_table "user_likes", force: :cascade do |t|
     t.boolean "status"
@@ -155,6 +165,7 @@ ActiveRecord::Schema.define(version: 2022_03_02_151809) do
   add_foreign_key "job_skills", "skills"
   add_foreign_key "matches", "job_offers"
   add_foreign_key "matches", "users"
+  add_foreign_key "meetings", "users"
   add_foreign_key "user_likes", "job_offers"
   add_foreign_key "user_likes", "users"
   add_foreign_key "user_skills", "skills"

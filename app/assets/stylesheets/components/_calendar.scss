@@ -1,0 +1,27 @@
+
+.simple-calendar .day {
+  height: 45px;
+}
+.table{
+--bs-table-bg: transparent;
+--bs-table-accent-bg: transparent;
+--bs-table-striped-color: #0E0000;
+--bs-table-striped-bg: rgba(199, 73, 238, 0.05);
+--bs-table-active-color: #0E0000;
+--bs-table-active-bg: rgba(0, 0, 0, 0.1);
+--bs-table-hover-color: #0E0000;
+--bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+}
+
+.meeting {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  background: #1EDD88;
+  transition: background 0.3s ease;
+}
+
+.meeting:hover {
+  background: #1BCB7F;
+  color: white;
+}
