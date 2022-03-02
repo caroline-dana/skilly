@@ -13,17 +13,20 @@
   </head>
 
   <body>
+    <div class="container-screen">
+      <div class="container-body">
 
-    <% unless controller_name == "registrations" || controller_name == "sessions" %>
-      <%= render 'shared/navbar' %>
-    <% end %>
+        <%= render 'shared/flashes' %>
 
-    <%= render 'shared/flashes' %>
+        <%= yield %>
 
-    <%= yield %>
+      </div>
 
-    <% unless controller_name == "registrations" || controller_name == "sessions" %>
-      <%= render 'shared/navbar_footer' %>
-    <% end %>
+      <div class="container-tab-bar">
+        <% unless controller_name == "registrations" || controller_name == "sessions" %>
+          <%= render 'shared/tab-bar' %>
+        <% end %>
+      </div>
+    </div>
   </body>
 </html>
