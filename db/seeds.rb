@@ -17,11 +17,10 @@ def get_image(image)
 end
 
 puts 'creating user 1'
-user_1 = User.create!(first_name: "Caroline", last_name: "Dana", email: "caroline.m.dana@gmail.com", password: "mdpmdp1", job_wanted: "Product Owner", hard_skills: "Logiciel SEO, CRM, Relation client", soft_skills: "Rigueur, Esprit d'équipe, Problem solving, Communication, Enthousiasme", languages: "Français, Anglais", years_of_experience: 8, values: "Loyauté, Bienveillance, Ownership, Humilité, Empathie")
+user_1 = User.create!(first_name: "Caroline", last_name: "Dana", email: "caroline.m.dana@gmail.com", password: "mdpmdp", job_wanted: "Product Owner", languages: "Français, Anglais", years_of_experience: 8)
 puts 'created Caroline'
 
 puts 'seeding companies'
-
 # Blablacar
 company_1 = Company.create(
   name: "Blablacar",
@@ -50,6 +49,57 @@ company_3 = Company.create(
 )
 puts 'seeding companies done'
 
+puts 'seeding skills'
+soft_skill_1 = Skill.create(name: "Esprit d'équipe", category: "soft_skill")
+soft_skill_2 = Skill.create(name: "Organisation", category: "soft_skill")
+soft_skill_3 = Skill.create(name: "Créativité", category: "soft_skill")
+soft_skill_4 = Skill.create(name: "Patience", category: "soft_skill")
+soft_skill_5 = Skill.create(name: "Curiosité", category: "soft_skill")
+soft_skill_6 = Skill.create(name: "Problem solving", category: "soft_skill")
+soft_skill_7 = Skill.create(name: "Rigueur", category: "soft_skill")
+soft_skill_8 = Skill.create(name: "Enthousiasme", category: "soft_skill")
+soft_skill_9 = Skill.create(name: "Management", category: "soft_skill")
+soft_skill_10 = Skill.create(name: "Empathie", category: "soft_skill")
+soft_skill_11 = Skill.create(name: "Flexibilité", category: "soft_skill")
+soft_skill_12 = Skill.create(name: "Gestion du temps", category: "soft_skill")
+soft_skill_13 = Skill.create(name: "Négociation", category: "soft_skill")
+soft_skill_14 = Skill.create(name: "Intelligence émotionnelle", category: "soft_skill")
+soft_skill_15 = Skill.create(name: "Motivation", category: "soft_skill")
+
+hard_skill_1 = Skill.create(name: "Software development", category: "hard_skill")
+hard_skill_2 = Skill.create(name: "Bases User Stories", category: "hard_skill")
+hard_skill_3 = Skill.create(name: "Methodologie Agile", category: "hard_skill")
+hard_skill_4 = Skill.create(name: "SCRUM", category: "hard_skill")
+hard_skill_5 = Skill.create(name: "Data analysis", category: "hard_skill")
+hard_skill_6 = Skill.create(name: "CRM", category: "hard_skill")
+hard_skill_7 = Skill.create(name: "Relation Client", category: "hard_skill")
+hard_skill_8 = Skill.create(name: "Vente", category: "hard_skill")
+hard_skill_9 = Skill.create(name: "Business Stratégie", category: "hard_skill")
+hard_skill_10 = Skill.create(name: "Ruby on Rails", category: "hard_skill")
+hard_skill_11 = Skill.create(name: "Front-end HTML CSS JS", category: "hard_skill")
+hard_skill_12 = Skill.create(name: "Business developement", category: "hard_skill")
+hard_skill_13 = Skill.create(name: "Pack office", category: "hard_skill")
+hard_skill_14 = Skill.create(name: "Python", category: "hard_skill")
+hard_skill_15 = Skill.create(name: "Marketing produit", category: "hard_skill")
+
+value_1 = Skill.create(name: "Loyauté", category: "values")
+value_2 = Skill.create(name: "Bienveillance", category: "values")
+value_3 = Skill.create(name: "Humilité", category: "values")
+value_4 = Skill.create(name: "Ténacité", category: "values")
+value_5 = Skill.create(name: "Humilité", category: "values")
+value_6 = Skill.create(name: "Ownership", category: "values")
+value_7 = Skill.create(name: "Partage", category: "values")
+value_8 = Skill.create(name: "Engagement", category: "values")
+value_9 = Skill.create(name: "Passion", category: "values")
+value_10 = Skill.create(name: "Culture résultat", category: "values")
+value_11 = Skill.create(name: "proximité", category: "values")
+value_12 = Skill.create(name: "Liberté d'expression", category: "values")
+value_13 = Skill.create(name: "Responsabilisation", category: "values")
+value_14 = Skill.create(name: "Indépendance", category: "values")
+value_15 = Skill.create(name: "Respect", category: "values")
+
+puts 'seeding skills done'
+
 puts 'seeding job offers'
 
 # Blablacar
@@ -64,11 +114,11 @@ job_offer_1 = JobOffer.new(
   Construire la feuille de route associée pour la réaliser.
   Collaborer avec l'ingénierie au sein d'une équipe pour exécuter la feuille de route.
   Communiquer sur le plan de l'équipe et les réalisations au sein de BlaBlaCar.",
-  hard_skills: "Software development, Bases User stories, Methodologie Agile, SCRUM",
-  soft_skills: "Créativité, Esprit critique, Curieux, Communication, Esprit d'équipe",
+  # hard_skills: "Software development, Bases User stories, Methodologie Agile, SCRUM",
+  # soft_skills: "Créativité, Esprit critique, Curieux, Communication, Esprit d'équipe",
   languages: "Français Anglais",
   years_of_experience: "5",
-  values: "Succès, Engagement, Empathie, Apprentissage, Humilité",
+  # values: "Succès, Engagement, Empathie, Apprentissage, Humilité",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
   question2: "Comment collectez-vous les retours utilisateurs ?",
   question3: "Comment validez-vous une nouvelle UX ou interface ?"
@@ -89,11 +139,11 @@ job_offer_2 = JobOffer.new(
   Définir la feuille de route de conversion du site web/des landings: vous identifiez & priorisez les projets, fonctionnalités & idées pertinentes pour augmenter notre conversion pour nos 5 marchés (France, Espagne, Allemagne, Suisse & Belgique).
   Améliorer les KPI de conversion : vous développez une méthode de test A/B pour tester de nouvelles idées, obtenir des insights et améliorer continuellement les taux de conversion du site web (landing pages), mais aussi sur notre produit (post sign-up).
   S'assurer que nos pages de destination sont à jour et localisées pour chaque marché en fonction du positionnement de notre marque et de nos dernières fonctionnalités/partenariats : vous travaillez en étroite collaboration avec le marketing, le marketing produit et les équipes locales pour vous assurer que nos nouveaux produits ou fonctionnalités sont visibles, bien compris et qu'ils incitent les prospects à convertir.",
-  hard_skills: "Logiciel SEO, CRM, Data analysis, Software development, Bases User stories",
-  soft_skills: "Esprit d'équipe, Organisation, Créativité, Patient, Curiosité",
+  # hard_skills: "Logiciel SEO, CRM, Data analysis, Software development, Bases User stories",
+  # soft_skills: "Esprit d'équipe, Organisation, Créativité, Patient, Curiosité",
   languages: "Français, Anglais, Allemand",
   years_of_experience: "5",
-  values: "Passion, Ownership, Humilité, Empathie, Tenacité",
+  # values: "Passion, Ownership, Humilité, Empathie, Tenacité",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
   question2: "Comment collectez-vous les retours utilisateurs ?",
   question3: "Comment validez-vous une nouvelle UX ou interface ?"
@@ -121,11 +171,11 @@ job_offer_3 = JobOffer.new(
   Communiquer en interne sur vos fonctionnalités, leurs évolutions et la vision du produit qu'elles portent.
   S'assurer que vos fonctionnalités sont correctement communiquées aux utilisateurs, en collaboration avec l'équipe CRM et Marketing.
   Participer à la définition de la feuille de route",
-  hard_skills: "CRM, Analytics, Relation client, Software development, Bases UX",
-  soft_skills: "Rigueur, Problem solving, Esprit d'équipe, Organisation, Enthousiasme",
+  # hard_skills: "CRM, Analytics, Relation client, Software development, Bases UX",
+  # soft_skills: "Rigueur, Problem solving, Esprit d'équipe, Organisation, Enthousiasme",
   languages: "Français, Anglais",
   years_of_experience: "8",
-  values: "Loyauté, Bienveillance, Ownership, Humilité, Tenacité",
+  # values: "Loyauté, Bienveillance, Ownership, Humilité, Tenacité",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
   question2: "Comment collectez-vous les retours utilisateurs ?",
   question3: "Comment validez-vous une nouvelle UX ou interface ?"
@@ -138,7 +188,6 @@ job_offer_3.save!
 puts 'seeding job offers done'
 
 puts 'seeding job likes'
-
 # Lydia
 job_like_3 = JobLike.create(user: user_1, job_offer: job_offer_3, status: true)
 
