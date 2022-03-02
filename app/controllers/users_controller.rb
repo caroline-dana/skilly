@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
+    @user_skill = UserSkill.new
   end
 
   def edit
@@ -20,3 +21,4 @@ class UsersController < ApplicationController
     params.require(:user).permit(:first_name, :last_name, :job_wanted, :soft_skills, :hard_skills, :languages, :years_of_experience, :values)
   end
 end
+
