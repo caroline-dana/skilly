@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_02_135008) do
+ActiveRecord::Schema.define(version: 2022_03_02_151809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,13 +74,19 @@ ActiveRecord::Schema.define(version: 2022_03_02_135008) do
     t.bigint "company_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "soft_skills"
-    t.string "hard_skills"
     t.string "languages"
     t.integer "years_of_experience"
-    t.string "values"
     t.string "company"
     t.index ["company_id"], name: "index_job_offers_on_company_id"
+  end
+
+  create_table "job_skills", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "job_offer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["job_offer_id"], name: "index_job_skills_on_job_offer_id"
+    t.index ["skill_id"], name: "index_job_skills_on_skill_id"
   end
 
   create_table "matches", force: :cascade do |t|
@@ -97,6 +103,13 @@ ActiveRecord::Schema.define(version: 2022_03_02_135008) do
     t.index ["user_id"], name: "index_matches_on_user_id"
   end
 
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.string "category"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+  
   create_table "meetings", force: :cascade do |t|
     t.string "name"
     t.datetime "start_time"
@@ -117,6 +130,15 @@ ActiveRecord::Schema.define(version: 2022_03_02_135008) do
     t.index ["user_id"], name: "index_user_likes_on_user_id"
   end
 
+  create_table "user_skills", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["skill_id"], name: "index_user_skills_on_skill_id"
+    t.index ["user_id"], name: "index_user_skills_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -128,11 +150,8 @@ ActiveRecord::Schema.define(version: 2022_03_02_135008) do
     t.string "first_name"
     t.string "last_name"
     t.string "job_wanted"
-    t.string "soft_skills"
-    t.string "hard_skills"
     t.string "languages"
     t.integer "years_of_experience"
-    t.string "values"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
@@ -142,9 +161,13 @@ ActiveRecord::Schema.define(version: 2022_03_02_135008) do
   add_foreign_key "job_likes", "job_offers"
   add_foreign_key "job_likes", "users"
   add_foreign_key "job_offers", "companies"
+  add_foreign_key "job_skills", "job_offers"
+  add_foreign_key "job_skills", "skills"
   add_foreign_key "matches", "job_offers"
   add_foreign_key "matches", "users"
   add_foreign_key "meetings", "users"
   add_foreign_key "user_likes", "job_offers"
   add_foreign_key "user_likes", "users"
+  add_foreign_key "user_skills", "skills"
+  add_foreign_key "user_skills", "users"
 end
