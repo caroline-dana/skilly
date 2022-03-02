@@ -1,0 +1,8 @@
+<% current_user.skills.each do |skill| %>
+<%= skill.name  %>
+<% end %>
+
+<%= simple_form_for @user_skill do |f| %>
+  <%= f.association :skill %>
+  <%= f.submit "Ajouter cette compétence", class: "btn btn-primary" %>
+<% end %>

@@ -1,17 +1,9 @@
 class UserSkillsController < ApplicationController
-  def new
-    @user_skill = UserSkill.new
-  end
-
   def create
-    @user_skill = UserSkill.new(params[:user_skill])
-    @user_skill.save
-    redirect_to user_path(@user)
-  end
-
-  def update
-    @user_skill = UserSkill.find(params[:id])
-    @user_skill.update(params[:user_skill])
+    @user = current_user
+    @user_skill = UserSkill.new(user_skill_params)
+    @user_skill.user = @user
+    @user_skill.save!
     redirect_to user_path(@user)
   end
 
@@ -19,5 +11,11 @@ class UserSkillsController < ApplicationController
     @user_skill = UserSkill.find(params[:id])
     @user_skill.destroy
     redirect_to user_path(@user)
+  end
+
+  private
+
+  def user_skill_params
+    params.require(:user_skill).permit(:skill_id)
   end
 end
