@@ -14,7 +14,7 @@
   <% unless @matches.nil?  %>
     <% @matches.each do |match| %>
       <% if match.status == true && match.callbooking == nil %>
-        <div class= "div-notification">
+        <div class= "div-notification" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <div class= "button-notification"> 1 </div>
           <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
         </div>
@@ -36,4 +36,25 @@
       </div>
     <% end %>
   <% end %>
+</div>
+
+<!--MODAL-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Veuillez sélectionner un horaire</h5>
+      </div>
+      <div class="modal-body">
+        <button type="button" class="btn btn-call" data-bs-dismiss="modal">04/03/21- 10h30/11h</button>
+        <button type="button" class="btn btn-call" data-bs-dismiss="modal">09/03/21- 10h30/11h</button>
+        <button type="button" class="btn btn-call" data-bs-dismiss="modal">10/03/21- 10h30/11h</button>
+        <button type="button" class="btn btn-call" data-bs-dismiss="modal">10/03/21- 10h30/11h</button>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-delete" data-bs-dismiss="modal"> Annuler le call</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+      </div>
+    </div>
+  </div>
 </div>
