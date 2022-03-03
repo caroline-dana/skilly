@@ -9,16 +9,14 @@
   <%= link_to root_path do %>
     <i class="fas fa-infinity"></i>
   <% end %>
-  
-  <% unless @matches.nil?  %>
-    <% @matches.each do |match| %>
-      <% if match.status == true && match.callbooking == nil %>
-       <div class= "div-notification">
+
+  <%= link_to dashboard_path do %>
+    <div class= "div-notification">
+      <% @matches = Match.where(user: current_user).where(status: true).where(callbooking: nil) %>
+      <% unless @matches.count == 0 %>
         <div class= "button-notification"> 1 </div>
-      <%#= link_to dashboard_path do %>
-      <i class="fas fa-tasks"></i> <p>Dashboard</p>
-        </div>
       <% end %>
-    <% end %>
+      <i class="fas fa-tasks"></i> <p>Dashboard</p>
+    </div>
   <% end %>
 </div>
