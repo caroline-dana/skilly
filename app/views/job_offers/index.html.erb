@@ -51,8 +51,10 @@
           <li><% job_offer.question3 %></li>
         </ul>
 
+      <div class="container d-flex justify-content-around">
         <%= link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post, "data-swipe-target" => "likeBtn" %>
         <%= link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post, "data-swipe-target" => "nopeBtn" %>
+      </div>
     </div>
   <% end %>
 </div>
