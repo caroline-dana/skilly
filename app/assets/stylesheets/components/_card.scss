@@ -31,9 +31,20 @@
   padding: 16px;
 }
 
+
 .card-dashboard img {
   height: 71px;
   width: 77px;
   object-fit: cover;
   border-radius: 33px;
+}
+
+.job-offer-card {
+  border: 1px solid black;
+  border-radius: 28px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top : 5px;
+  margin-bottom: 5px;
 }
