@@ -3,19 +3,44 @@
   <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
 </div>
 
-<%= console %>
 
 <div class="cards-container justify-content-around" data-controller="swipe">
   <% @job_offers.each do |job_offer| %>
     <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
-
+        <div class="container-head">
+          <img class="avatar-head" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
+          <p class="mt-5"><strong><%= job_offer.job_title %></strong></p>
+          <%#= cl_image_tag artwork.photo.key, height: 300, width: 400, crop: :fill %>
+        </div>
         <ul style="list-style: none;padding: 15px;margin: 20px 0;">
-          <li class="mb-2"><strong><%= job_offer.job_title %></strong></li>
-          <li class="mb-1"><%= job_offer.city %></li>
-          <li class="mb-1"><%= job_offer.contracttype %></li>
 
-          <li class="mb-1">Langues parlées: <%= job_offer.languages %></li>
-          <li class="mb-1"><%= job_offer.years_of_experience %> années d'expérience</li>
+          <li class="mb-1">Soft skills </li>
+          <div class="container-skill">
+            <% job_offer.soft_skills.each do |soft|%>
+              <div class="skills"><%= soft.name %></div>
+            <% end %>
+          </div>
+
+          <li class="mb-1">Hard skills </li>
+          <div class="container-skill">
+            <% job_offer.hard_skills.each do |hard| %>
+              <div class="skills"><%= hard.name %></div>
+            <% end %>
+          </div>
+
+          <li class="mb-1">Les valeurs </li>
+          <div class="container-skill">
+            <% job_offer.values.each do |value|  %>
+              <div class="skills"><%= value.name %></div>
+            <% end %>
+          </div>
+
+          <div class="container-skill mb-4">
+            <li class="mb-1"> <%= job_offer.city %></li>
+            <li class="mb-1"> <%= job_offer.contracttype %></li>
+            <li class="mb-1"> <%= job_offer.languages %></li>
+            <li class="mb-1"> <%= job_offer.years_of_experience %> ans requis</li>
+          </div>
 
           <li class="mb-1">Description du poste: <%= job_offer.description %></li>
           <li>

@@ -15,11 +15,11 @@ class JobOffer < ApplicationRecord
     }
 
     def soft_skills
-      skills.where(category: 'soft_skills')
+      skills.where(category: 'soft_skill')
     end
 
     def hard_skills
-      skills.where(category: 'hard_skills')
+      skills.where(category: 'hard_skill')
     end
 
     def values
