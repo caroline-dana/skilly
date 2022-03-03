@@ -5,12 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+JobSkill.destroy_all
 JobLike.destroy_all
-UserLike.destroy_all
-Match.destroy_all
 JobOffer.destroy_all
-Company.destroy_all
+UserLike.destroy_all
 User.destroy_all
+Match.destroy_all
+Company.destroy_all
 
 def get_image(image)
   File.open(File.join(File.dirname(__FILE__), "../app/assets/images/#{image}"))
