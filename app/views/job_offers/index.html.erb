@@ -1,6 +1,6 @@
 <div class="navbar-picture mb-3" style="height: 56px;">
+   <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
   <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
-  <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
 </div>
 
 <%= console %>
@@ -16,9 +16,10 @@
 
           <li class="mb-1">Langues parlées: <%= job_offer.languages %></li>
           <li class="mb-1"><%= job_offer.years_of_experience %> années d'expérience</li>
+
           <li class="mb-1">Description du poste: <%= job_offer.description %></li>
           <li>
-            <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-ghost" %>
+            <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-ghost d-flex justify-content-center" %>
           </li>
           <li><% job_offer.question1 %></li>
           <li><% job_offer.question2 %></li>
