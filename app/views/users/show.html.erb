@@ -1,8 +1,24 @@
-<% current_user.skills.each do |skill| %>
-<%= skill.name  %>
-<% end %>
+<div class="navbar-picture mb-3" style="height: 56px;">
+   <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
+</div>
 
-<%= simple_form_for @user_skill do |f| %>
-  <%= f.association :skill %>
-  <%= f.submit "Ajouter cette compétence", class: "btn btn-primary" %>
-<% end %>
+<div class='container-profil'>
+  <div>
+    <img class="avatar-profil d-flex justify-content-center" alt="avatar-profil" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
+    <h1><%= @user.first_name %></h1>
+    <h2> Expert </h2>
+    <h3> years_of_experience</h3>
+  </div>
+
+
+
+  <div>
+    <%= simple_form_for @user_skill do |f| %>
+      <%= f.association :skill %>
+      <%= f.submit "Ajouter cette compétence", class: "btn btn-primary" %>
+    <% end %>
+    <% current_user.skills.each do |skill| %>
+    <%= skill.name  %>
+    <% end %>
+  </div>
+</div>
