@@ -17,3 +17,19 @@
 .container-tab-bar {
   height: 8vh;
 }
+
+.container-head {
+  display: flex;
+   justify-content: space-around;
+}
+
+.container-skill {
+ display: flex;
+ justify-content: center;
+ text-align: center;
+}
+
+.container-like {
+  display: flex;
+  justify-content: space-around;
+}

@@ -1,33 +1,53 @@
 <div class="navbar-picture mb-3" style="height: 56px;">
+   <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
   <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
-  <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
 </div>
 
 <div class="cards-container justify-content-around">
   <% @job_offers.each do |job_offer| %>
     <div class="job-offer-card">
-        <div class="job-offer-photo-category">
+        <div class="container-head">
+          <img class="avatar-head" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
+          <p class="mt-5"><strong><%= job_offer.job_title %></strong></p>
           <%#= cl_image_tag artwork.photo.key, height: 300, width: 400, crop: :fill %>
         </div>
         <ul style="list-style: none;padding: 15px;margin: 20px 0;">
-          <li class="mb-2"><strong><%= job_offer.job_title %></strong></li>
-          <li class="mb-1"><%= job_offer.city %></li>
-          <li class="mb-1"><%= job_offer.contracttype %></li>
-          <li class="mb-1">Soft skills requises: <%= job_offer.soft_skills %></li>
-          <li class="mb-1">Hard skills requises: <%= job_offer.hard_skills %></li>
-          <li class="mb-1">Langues parlées: <%= job_offer.languages %></li>
-          <li class="mb-1"><%= job_offer.years_of_experience %> années d'expérience</li>
-          <li class="mb-1">Les valeurs qu'on recherche: <%= job_offer.values %></li>
+
+          <li class="mb-1">Soft skills </li>
+          <div class="container-skill">
+            <p> <%= job_offer.soft_skills%> </p>
+          </div>
+
+          <li class="mb-1">Hard skills </li>
+          <div class="container-skill">
+            <p> <%= job_offer.hard_skills %> </p>
+          </div>
+
+          <li class="mb-1">Les valeurs </li>
+          <div class="container-skill">
+            <p> <%= job_offer.values %> </p>
+          </div>
+
+          <div class="container-skill">
+            <li class="mb-1"> <%= job_offer.city %></li>
+            <li class="mb-1"> - <%= job_offer.contracttype %></li>
+            <li class="mb-1"> - <%= job_offer.languages %></li>
+            <li class="mb-1"> - <%= job_offer.years_of_experience %> ans requis</li>
+          </div>
+
           <li class="mb-1">Description du poste: <%= job_offer.description %></li>
           <li>
-            <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-ghost" %>
+            <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-ghost d-flex justify-content-center" %>
           </li>
           <li><% job_offer.question1 %></li>
           <li><% job_offer.question2 %></li>
           <li><% job_offer.question3 %></li>
         </ul>
-        <%= link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post %>
-        <%= link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post %>
+
+        <div class="container-like">
+          <%= link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post %>
+          <%= link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post %>
+        </div>
     </div>
   <% end %>
 </div>
