@@ -42,21 +42,20 @@
 .job-offer-card {
   border: 1px solid black;
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top : 5px;
   margin-bottom: 5px;
-  
-  .skills {
-    border: 1px solid black;
-    margin-left: 2px;
-    margin-right: 2px;
-    border-radius: 20px;
-    padding: 2px;
   * {
     pointer-events: none;
-
   }
+}
+  .skills {
+  border: 1px solid black;
+  margin-left: 2px;
+  margin-right: 2px;
+  border-radius: 20px;
+  padding: 2px;
 }
