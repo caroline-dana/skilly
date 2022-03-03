@@ -11,7 +11,7 @@ class UserLikesController < ApplicationController
     end
 
     if @user_like.save
-      if @user_like.status = true && JobLike.find_by(user: current_user, job_offer: @job_offer, status: true)
+      if @user_like.status == true && JobLike.find_by(user: current_user, job_offer: @job_offer, status: true)
         match = Match.create(user: current_user, job_offer: @job_offer)
         redirect_to match_path(match)
       else
