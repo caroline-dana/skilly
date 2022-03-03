@@ -6,6 +6,6 @@ class DashboardsController < ApplicationController
 
   # For a monthly view:
   @meetings = Meeting.where(start_time: start_date.beginning_of_month.beginning_of_week..start_date.end_of_month.end_of_week)
-
+  @matches = Match.where(user: current_user)
   end
 end

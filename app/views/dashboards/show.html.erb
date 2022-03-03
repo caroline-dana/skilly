@@ -1,5 +1,30 @@
 
-<div class="calendar-container">
+<div class="container-follow mt-4">
+  <h2>Match en attentes</h2>
+  <div class="card-dashboard d-flex justify-content-around mt-4">
+    <img src="https://www.appvizer.fr/media/application/26182/logo/logo-skello.png" />
+    <img src="https://cdn.1min30.com/wp-content/uploads/2018/02/Couleur-logo-Airbnb.jpg" />
+    <img src="https://www.vizir.co/wp-content/uploads/2021/07/logo-rond-payfit.png"/>
+  </div>
+</div>
+
+<div class="container-follow mt-4">
+  <h2>En attente de validations questions</h2>
+  <div class="card-dashboard d-flex justify-content-around mt-4">
+  <% @matches.each do |match| %>
+    <% if match.status == true && match.callbooking == nil %>
+    <div class= "div-notification">
+      <div class= "button-notification"> 1 </div>
+      <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
+    </div>
+    <% end %>
+  <% end %>
+    <img src="https://touteslesbox.fr/wp-content/uploads/2019/02/hellofresh-logo.jpg"/>
+    <img src="data:image/png;base64,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"/>
+  </div>
+</div>
+
+<div class="calendar-container mt-4">
   <%= month_calendar(events: @meetings, end_attribute: :end_time) do |date, meetings| %>
     <%= date %>
     <% meetings.each do |meeting| %>
