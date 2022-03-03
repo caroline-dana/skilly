@@ -3,9 +3,10 @@
   <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
 </div>
 
-<div class="cards-container justify-content-around">
+
+<div class="cards-container justify-content-around" data-controller="swipe">
   <% @job_offers.each do |job_offer| %>
-    <div class="job-offer-card">
+    <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
         <div class="container-head">
           <img class="avatar-head" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
           <p class="mt-5"><strong><%= job_offer.job_title %></strong></p>
@@ -50,10 +51,8 @@
           <li><% job_offer.question3 %></li>
         </ul>
 
-        <div class="container-like">
-          <%= link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post %>
-          <%= link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post %>
-        </div>
+        <%= link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post, "data-swipe-target" => "likeBtn" %>
+        <%= link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post, "data-swipe-target" => "nopeBtn" %>
     </div>
   <% end %>
 </div>

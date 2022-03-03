@@ -9,7 +9,16 @@
   <%= link_to root_path do %>
     <i class="fas fa-infinity"></i>
   <% end %>
-  <%= link_to root_path do %>
-    <i class="fas fa-tasks"></i>
+  
+  <% unless @matches.nil?  %>
+    <% @matches.each do |match| %>
+      <% if match.status == true && match.callbooking == nil %>
+       <div class= "div-notification">
+        <div class= "button-notification"> 1 </div>
+      <%#= link_to dashboard_path do %>
+      <i class="fas fa-tasks"></i> <p>Dashboard</p>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
 </div>

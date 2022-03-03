@@ -1,5 +1,6 @@
 class JobOffer < ApplicationRecord
   has_many :job_skills
+
   has_many :skills, through: :job_skills
   belongs_to :company
   has_one_attached :photo
