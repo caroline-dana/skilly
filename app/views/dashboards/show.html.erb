@@ -11,12 +11,14 @@
 <div class="container-follow mt-4">
   <h2>En attente de validations questions</h2>
   <div class="card-dashboard d-flex justify-content-around mt-4">
-  <% @matches.each do |match| %>
-    <% if match.status == true && match.callbooking == nil %>
-    <div class= "div-notification">
-      <div class= "button-notification"> 1 </div>
-      <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
-    </div>
+  <% unless @matches.nil?  %>
+    <% @matches.each do |match| %>
+      <% if match.status == true && match.callbooking == nil %>
+        <div class= "div-notification">
+          <div class= "button-notification"> 1 </div>
+          <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
+        </div>
+      <% end %>
     <% end %>
   <% end %>
     <img src="https://touteslesbox.fr/wp-content/uploads/2019/02/hellofresh-logo.jpg"/>
