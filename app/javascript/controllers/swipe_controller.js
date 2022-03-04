@@ -5,19 +5,12 @@ import swal from 'sweetalert';
 
 
 export default class extends Controller {
-  static targets = [ "card", "nopeBtn", "likeBtn" ]
+  static targets = [ "card"]
 
   connect() {
     this._initCards();
     this._initSwipe();
 
-    this.nopeBtnTarget.addEventListener('click', (e) => {
-      this._createButtonListener(false, e)
-    });
-
-    this.likeBtnTarget.addEventListener('click', (e) => {
-      this._createButtonListener(true, e)
-    });
 
     this.likeEvent = new Event('liked');
     this.dislikeEvent = new Event('disliked');
