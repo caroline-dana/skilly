@@ -44,13 +44,13 @@
 .job-offer-card {
   display: inline-block;
   width: 90vw;
-  max-width: 400px;
-  height: 70vh;
+  height: 84vh;
   background: #FFFFFF;
   padding-bottom: 40px;
-  border-radius: 8px;
+  border-radius: 15px;
   overflow: hidden;
   position: absolute;
+  top: 47px;
   will-change: transform;
   transition: all 0.3s ease-in-out;
   cursor: -webkit-grab;
