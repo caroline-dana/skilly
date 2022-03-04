@@ -4,10 +4,18 @@
 
 <div class='container-profil'>
   <div>
-    <img class="avatar-profil d-flex justify-content-center" alt="avatar-profil" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
+    <img class="avatar-profil" alt="avatar-profil" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
     <h1><%= @user.first_name %></h1>
-    <h2> Expert </h2>
-    <h3> years_of_experience</h3>
+    <h2><%= @user.job_wanted %></h2>
+    <h3> Depuis <%= @user.years_of_experience %> ans</h3>
+  </div>
+
+  <div>
+   les valeur ici <%= @user %>
+  </div>
+
+  <div>
+    les languages parlé <%= @user %>
   </div>
 
 
@@ -15,10 +23,10 @@
   <div>
     <%= simple_form_for @user_skill do |f| %>
       <%= f.association :skill %>
-      <%= f.submit "Ajouter cette compétence", class: "btn btn-primary" %>
+      <%= f.submit "+", class: "btn btn-primary" %>
     <% end %>
     <% current_user.skills.each do |skill| %>
-    <%= skill.name  %>
+    <p><%= skill.name %> </p>
     <% end %>
   </div>
 </div>
