@@ -12,7 +12,10 @@ Rails.application.routes.draw do
     resources :user_likes, only: [ :create ]
   end
 
+
   resources :matches, only: [ :show, :update ]
+
+  get 'book_date', to: 'matches#book_date'
 
   resource :dashboard, only: [ :show ]
 end

@@ -9,6 +9,15 @@ class MatchesController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def book_date
+    @match = Match.last
+    @time = DateTime.new(2022, 3, 7, 17, 0, 0)
+    #@time.hour = 17
+    @match.callbooking = @time
+    @match.save
+    redirect_to dashboard_path
+  end
+
   private
 
   def match_params
