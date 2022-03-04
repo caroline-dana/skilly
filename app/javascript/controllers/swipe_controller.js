@@ -59,7 +59,7 @@ export default class extends Controller {
       card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
       card.style.opacity = (10 - index) / 10;
     });
-
+    console.log('coucou');
     this.element.classList.add('loaded');
   }
 
@@ -91,7 +91,7 @@ export default class extends Controller {
       el.classList.remove('moving', 'tinder_love', 'tinder_nope');
 
       const moveOutWidth = document.body.clientWidth;
-      const keep = Math.abs(event.deltaX) < 80 || Math.abs(event.velocityX) < 0.5;
+      const keep = Math.abs(event.deltaX) < 80 //|| Math.abs(event.velocityX) < 0.5;
 
       if (!keep && event.additionalEvent === 'panright') {
         this.liked(event.target.dataset.id)

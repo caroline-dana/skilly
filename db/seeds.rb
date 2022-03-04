@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 JobSkill.destroy_all
 JobLike.destroy_all
-JobOffer.destroy_all
 UserLike.destroy_all
-User.destroy_all
 Match.destroy_all
+JobOffer.destroy_all
+User.destroy_all
 Company.destroy_all
 
 def get_image(image)
