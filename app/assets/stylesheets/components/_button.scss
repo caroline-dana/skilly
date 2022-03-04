@@ -51,6 +51,15 @@
   background-color: red;
 }
 
+.btn-user-show {
+  color: #4A4A4A;
+  border: 1px solid #4A4A4A;
+  padding: 8px 24px;
+  border-radius: 50px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
 .btn-book{
   color: #fff;
   background-color: #8385ee;
