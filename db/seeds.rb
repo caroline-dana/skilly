@@ -7,10 +7,10 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 JobSkill.destroy_all
 JobLike.destroy_all
-JobOffer.destroy_all
 UserLike.destroy_all
-User.destroy_all
 Match.destroy_all
+JobOffer.destroy_all
+User.destroy_all
 Company.destroy_all
 
 def get_image(image)
@@ -18,8 +18,8 @@ def get_image(image)
 end
 
 puts 'creating user 1'
-user_1 = User.create!(first_name: "Caroline", last_name: "Dana", email: "caroline.m.dana@gmail.com", password: "mdpmdp", job_wanted: "Product Owner", languages: "Français Anglais", years_of_experience: 8)
-puts 'created Caroline'
+user_1 = User.create!(first_name: "Aurore", last_name: "Gosset", email: "auroregosset.pro@gmail.com", password: "mdpmdp", job_wanted: "Product Owner", languages: "Français Anglais", years_of_experience: 8)
+puts 'created Aurore'
 
 puts 'seeding companies'
 # Blablacar
@@ -31,6 +31,10 @@ company_1 = Company.create(
   recruiter_message: "Si tu es un team pleayer qui veut changer le futur de la mobilité, rejoins-nous !"
 )
 
+file = get_image("logo-blablacar.png")
+company_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_1.save!
+
 # Skello
 company_2 = Company.create(
   name: "Skello",
@@ -40,6 +44,10 @@ company_2 = Company.create(
   recruiter_message: "Si tu as envie de déplacer des montagnes avec nous, n'attends plus, postule !"
 )
 
+file = get_image("logo-skello.png")
+company_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_2.save!
+
 # Lydia
 company_3 = Company.create(
   name: "Lydia",
@@ -48,6 +56,11 @@ company_3 = Company.create(
   description: "Lydia a pour mission de rendre l’expérience du paiement aussi simple que possible, pour tous. En exploitant le meilleur des nouvelles technologies pour créer des solutions de paiement mobile intuitives, sécurisées et surtout universelles. Les services proposés sont nombreux : carte de paiement, paiement mobile sans contact, cagnottes, comptes partagés… Il y en a pour tous les goûts ! Lancée en 2013, Lydia est aujourd’hui leader du paiement mobile et compte plus de 3 millions d'utilisateurs en Europe (et plus de 4000 nouveaux chaque jour). Lydia est la 22ème licorne de la French Tech ! ",
   recruiter_message: "Nous cherchons des talents pour nous inspirer et que nous inspirons. Rejoins-nous, aide-nous à construire une application parfaite"
 )
+
+file = get_image("logo-lydia.png")
+company_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_3.save!
+
 puts 'seeding companies done'
 
 puts 'seeding skills'

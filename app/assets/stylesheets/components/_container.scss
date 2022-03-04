@@ -38,4 +38,43 @@
 
 .container-home-page {
   margin-top: 8vh;
+
+.container-profil {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.intro {
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.values-languages {
+  height: 20%;
+}
+
+.skills {
+  height: 45%;
+}
+
+.values {
+  border: 1px solid grey;
+  border-radius: 25px;
+  align-self: center;
+  padding: 10px 30px;
+  margin-bottom: 15px;
+}
+
+.language-each {
+  border: 1px solid grey;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  padding: 5px 8px;
+  margin-bottom: 15px;
 }
