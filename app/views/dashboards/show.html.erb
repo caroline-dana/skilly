@@ -1,7 +1,8 @@
 
 <div class="container-follow mt-4">
-  <h2>Calls à venir </h2>
-  <div class="card-dashboard d-flex justify-content-around mt-4">
+  <h1><strong>Mon dashboard</strong></h1>
+  <h2 class= "dashboard-title">Calls à venir </h2>
+  <div class="card-dashboard d-flex justify-content-around">
     <% unless @accepted_matches.nil? %>
       <% @accepted_matches.each do |match| %>
         <div class= "div-notification" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -15,9 +16,9 @@
   </div>
 </div>
 
-<div class="container-follow mt-4">
-  <h2>Matchs en attente</h2>
-  <div class="card-dashboard d-flex justify-content-around mt-4">
+<div class="container-follow">
+  <h2 class= "dashboard-title">Matchs en attente </h2>
+  <div class="card-dashboard d-flex justify-content-around">
     <% unless @pending_matches.nil?  %>
       <% @pending_matches.each do |match| %>
           <div class= "div-notification" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -56,7 +57,9 @@
         <h5 class="modal-title" id="exampleModalLabel">Veuillez sélectionner un horaire</h5>
       </div>
       <div class="modal-body">
-        <%= link_to "04/03/21- 11h30/12h", book_date_path %>
+          <div class="btn-book">
+            <%= link_to "07/03/21- 11h30/12h", book_date_path %>
+          </div>
         <button type="button" class="btn btn-call" data-bs-dismiss="modal">09/03/21- 14h30/15h</button>
         <button type="button" class="btn btn-call" data-bs-dismiss="modal">17/03/21- 10h30/11h</button>
         <button type="button" class="btn btn-call" data-bs-dismiss="modal">10/03/21- 15h30/16h</button>
