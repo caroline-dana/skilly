@@ -276,14 +276,14 @@ job_offer_5.save!
 puts 'seeding job offers done'
 
 puts 'seeding job skills'
-[job_offer_1, job_offer_2].each do |job_offer|
+[job_offer_1, job_offer_2, job_offer_3, job_offer_4].each do |job_offer|
   [soft_skill_4, soft_skill_5, soft_skill_6, hard_skill_1, hard_skill_2, hard_skill_3, value_4, value_5, value_6,].each do |skill|
     JobSkill.create(job_offer: job_offer, skill: skill)
   end
 end
 
 [soft_skill_1, soft_skill_2, soft_skill_3, hard_skill_7, hard_skill_9, hard_skill_13, value_1, value_2, value_3].each do |skill|
-  JobSkill.create(job_offer: job_offer_3, skill: skill)
+  JobSkill.create(job_offer: job_offer_5, skill: skill)
 end
 puts 'seeding job skills done'
 
