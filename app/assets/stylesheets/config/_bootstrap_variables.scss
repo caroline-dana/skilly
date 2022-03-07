@@ -23,3 +23,8 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+$modal-fade-transform: translate(0, 150px);
+$modal-show-transform: none;
+$modal-transition: transform .3s ease-out;
+$modal-backdrop-opacity: 0.1;
