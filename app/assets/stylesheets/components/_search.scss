@@ -1,18 +1,21 @@
 .search-bar {
-  border: 2px solid black;
-  background: rgba(0, 0, 0, 0);
+
+  border: 2px solid #1E2CFB;
   border-radius: 50px;
-  width: 400px;
+  color: #1E2CFB;
+  width: 260px;
+  overflow: hidden;
+
   div {
     margin: 0 !important;
   }
 }
-
 .form-control {
   background-color: brown;
   border: 0px;
-  margin:0;
+  margin: 0;
   &::placeholder {
+
     text-align: center;
   }
   &:focus {
@@ -20,13 +23,65 @@
     outline: 0;
     box-shadow: none;
   }
-}
 
+  .log{
+    border-right:1px solid red ;
+  }
+}
 .postfix {
-  background-color: brown;
+  background-color: #F3D0FF;
   color: whitesmoke;
   border: none;
   i {
     font-size:32px;
   }
 }
+
+
+
+
+
+// .search-bar {
+//   border: 2px solid whitesmoke;
+//   background: rgba(0, 0, 0, 0);
+//   border-radius: 50px;
+//   color: whitesmoke;
+//   width: 400px;
+//   div {
+//     margin: 0 !important;
+//   }
+// }
+
+// .form-inline {
+//   background-color: #F3D0FF;
+
+
+//   .form-control {
+//     // border: 2px solid #1E2CFB;
+//     margin: 0;
+//     color: #1E2CFB;
+//     background-color:#F3D0FF ;
+
+//     &::placeholder {
+//       color: #1E2CFB;
+//       text-align: left;
+//     }
+//   }
+//   .yellow-btn {
+//     border: 1px solid #1E2CFB;
+//     color: #1E2CFB;
+//     background-color: #F0F643;
+//     border-radius: 50px;
+//     padding: 10px;
+//     // width: 22%;
+//     // height: 100%;
+//     width: 18vh;
+//     height: 8vh;
+
+//   }
+
+//   .form-actions {
+//     display: flex;
+//     justify-content: center;
+//   }
+// }
