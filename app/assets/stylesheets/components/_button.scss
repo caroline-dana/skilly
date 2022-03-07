@@ -1,13 +1,11 @@
 .my-button {
-  color: whitesmoke;
-  border: 1px solid whitesmoke;
+  color: #2A4AFB;
   padding: 10px 20px;
-  border-radius: 10px;
-  font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
   margin: auto;
   display: grid;
+  font-size: 35px;
 }
 
 .my-button:hover {

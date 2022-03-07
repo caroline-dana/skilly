@@ -1,0 +1,45 @@
+// .form-login {
+//   background-color: none;
+
+//   .form-control {
+//     border: 1px solid #2A4AFB;
+//     background-color: #F0F643;
+//     border-radius: 50px;
+//     &::placeholder {
+//       color: black;
+//       text-align: left;
+//     }
+//   }
+// }
+
+
+
+//////////////
+
+.form-login {
+  background-color: none;
+
+  .form-control {
+    border-bottom: 1px solid #1E2CFB;
+    color: #1E2CFB;
+
+    &::placeholder {
+      color: #1E2CFB;
+      text-align: left;
+    }
+  }
+  .yellow-btn {
+    border: 1px solid #1E2CFB;
+    color: #1E2CFB;
+    background-color: #F0F643;
+    border-radius: 50px;
+    width: 18vh;
+    height: 8vh;
+
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
+  }
+}

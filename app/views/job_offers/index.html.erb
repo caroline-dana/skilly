@@ -35,13 +35,6 @@
                 <% end %>
               </div>
 
-            <div class="container-skill mt-4 mb-3">
-              <li class="mb-1"> <%= job_offer.city %></li>
-              <li class="mb-1"> <%= job_offer.contracttype %></li>
-              <li class="mb-1"> <%= job_offer.languages %></li>
-              <li class="mb-1"> <%= job_offer.years_of_experience %> ans requis</li>
-            </div>
-
             <ul>
               <% job_offer.description.split('-').each do |word| %>
                 <li class="mb-1"><%= word %></li>

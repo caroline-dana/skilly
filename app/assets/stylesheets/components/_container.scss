@@ -1,21 +1,5 @@
-.container-name-app {
-  display: flex;
-  height: 60px;
-  margin-top: 200px;
-  margin-bottom: 30px;
-  align-items: center;
-  justify-content: center;
-  color: whitesmoke;
-  font-size: 65px;
-  font-family: "Nunito", "sans-serif";
-  text-shadow: 1px 1px 2px #bebe84;
-}
-
 .container-signup {
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .1);
   width: 280px;
-  border: 2px solid whitesmoke;
   background: rgba(0, 0, 0, 0);
   margin: auto;
   align-items: center;
@@ -24,16 +8,8 @@
 }
 
 .container-screen{
-  min-height: 100vh;
-}
-
-.container-body {
-  height: 96vh;
-  overflow: scroll;
-}
-
-.container-tab-bar {
-  height: 4vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container-head {
@@ -102,4 +78,10 @@
   align-self: center;
   padding: 5px 8px;
   margin-bottom: 15px;
+}
+
+.container-wrapping-login {
+ background-color: #F3D0FF;
+ height: 100vh;
+
 }
