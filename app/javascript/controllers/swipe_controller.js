@@ -29,7 +29,7 @@ export default class extends Controller {
           console.log(data.status);
           console.log(data.match);
           if (data.status === "match") {
-            swal("It's a match!").then(()=> {
+            swal({text: "It's a match!", className: "alert-design"}).then(()=> {
               console.log(data.match);
               window.location.href = `/matches/${data.match}`;
             });;

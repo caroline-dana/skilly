@@ -1,6 +1,7 @@
 class Skill < ApplicationRecord
   has_many :job_skills
   has_many :user_skills
+  has_many :users, through: :user_skills
 
   scope :valeurs, -> { where(category: 'values') }
   scope :soft_skills, -> { where(category: 'soft_skill') }
