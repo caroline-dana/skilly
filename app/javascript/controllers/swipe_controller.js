@@ -5,12 +5,11 @@ import swal from 'sweetalert';
 
 
 export default class extends Controller {
-  static targets = [ "card"]
+  static targets = [ "card" , "like", "dislike" ]
 
   connect() {
     this._initCards();
     this._initSwipe();
-
 
     this.likeEvent = new Event('liked');
     this.dislikeEvent = new Event('disliked');
@@ -70,6 +69,18 @@ export default class extends Controller {
     hammertime.on('pan', (event) => {
       if (event.deltaX === 0 || event.center.x === 0 && event.center.y === 0) return;
 
+      if (event.additionalEvent === 'panleft') {
+        this.dislikeTarget.style.opacity = 1
+        this.likeTarget.style.opacity = 0
+
+        this._resetIcons()
+      } else {
+        this.dislikeTarget.style.opacity = 0
+        this.likeTarget.style.opacity = 1
+
+        this._resetIcons()
+      }
+
       el.classList.add('moving');
       el.classList.toggle('tinder_love', event.deltaX > 0);
       el.classList.toggle('tinder_nope', event.deltaX < 0);
@@ -122,11 +133,19 @@ export default class extends Controller {
     card.style.transform = `translate(${minus}${moveOutWidth}px, -100px) rotate(${minus}30deg)`;
     card.classList.add('removed');
 
+
     this._initCards();
     event.preventDefault();
   }
 
   _activeCards() {
     return this.cardTargets.filter(e => !e.classList.contains('removed'));
+  }
+
+  _resetIcons() {
+    setTimeout(() => {
+      this.likeTarget.style.opacity = 0
+      this.dislikeTarget.style.opacity = 0
+    }, 500);
   }
 }
