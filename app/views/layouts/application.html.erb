@@ -14,16 +14,14 @@
 
   <body>
     <div class="container-screen">
-      <div class="container-body">
 
         <%= render 'shared/flashes' %>
 
         <%= yield %>
 
-      </div>
-
       <div class="container-tab-bar d-flex justify-content-center">
-        <% unless controller_name == "registrations" || controller_name == "sessions" %>
+        <% if user_signed_in? %>
+        <%# unless controller_name == "registrations" || controller_name == "sessions" %>
           <%= render 'shared/tab-bar' %>
         <% end %>
       </div>

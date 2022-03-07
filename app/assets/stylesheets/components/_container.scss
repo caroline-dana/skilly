@@ -1,21 +1,5 @@
-.container-name-app {
-  display: flex;
-  height: 60px;
-  margin-top: 200px;
-  margin-bottom: 30px;
-  align-items: center;
-  justify-content: center;
-  color: whitesmoke;
-  font-size: 65px;
-  font-family: "Nunito", "sans-serif";
-  text-shadow: 1px 1px 2px #bebe84;
-}
-
 .container-signup {
-  border-radius: 10px;
-  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .1);
   width: 280px;
-  border: 2px solid whitesmoke;
   background: rgba(0, 0, 0, 0);
   margin: auto;
   align-items: center;
@@ -24,16 +8,8 @@
 }
 
 .container-screen{
-  min-height: 100vh;
-}
-
-.container-body {
-  height: 96vh;
-  overflow: scroll;
-}
-
-.container-tab-bar {
-  height: 4vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .container-head {
@@ -72,34 +48,66 @@
 }
 
 .intro {
-  height: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #1E2CFB;
+  background-color: #F2FF42;
+  border: solid;
+  border-radius: 15px;
+  border-color: #1E2CFB;
+  opacity: 0.8;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-.values-languages {
-  height: 20%;
-}
-
-.skills {
-  height: 45%;
-}
 
 .values {
-  border: 1px solid grey;
+  border: 1px solid #1E2CFB;
   border-radius: 25px;
   align-self: center;
   padding: 10px 30px;
   margin-bottom: 15px;
+  color: #F3D0FF;
+  background-color: #1E2CFB;
 }
 
 .language-each {
-  border: 1px solid grey;
+  border: 1px solid #1E2CFB;
   border-radius: 15px;
   display: flex;
   flex-direction: row;
   align-self: center;
   padding: 5px 8px;
   margin-bottom: 15px;
+  color: #F3D0FF;
+  background-color: #1E2CFB;
+}
+
+.name {
+  font-size: 12px;
+}
+
+.job {
+  font-size: 10px;
+}
+
+.experience {
+  font-size: 8px;
+}
+
+.nav-item {
+  color: #F3D0FF;
+  background-color: #1E2CFB;
+  border-radius: 15px;
+}
+
+.tab-content {
+  color: #1E2CFB;
+}
+
+.container-wrapping-login {
+ background-color: #F3D0FF;
+ height: 100vh;
+
 }

@@ -1,17 +1,21 @@
-<div class='container-profil'>
+<div class='container-profil' style="background-color:#F3D0FF;text-align:center">
 
   <div class="navbar-picture mb-3" style="height: 56px;">
     <i class="fas fa-chevron-left" style="font-size: 25px;"></i>
   </div>
 
-  <div class='intro'>
+  <div class='intro mb-5'>
     <div class='user-photo'>
       <img class="avatar-profil" alt="avatar-profil" src="https://avatars.githubusercontent.com/u/95220236?v=4">
     </div>
+    <div class='name'>
       <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+    </div>
+    <div class='job'>
       <h2><%= @user.job_wanted %></h2>
+    </div>
     <div class='experience'>
-      <h4>Expérience: <%= @user.years_of_experience %> ans</h3>
+      <h4><%= @user.years_of_experience %> ans d'expérience</h3>
     </div>
   </div>
 
@@ -19,9 +23,9 @@
     <% @user.skills.valeurs.each do |skill| %>
        <%= skill.name %>
     <% end %>
- </div>
+  </div>
 
- <div class='languages d-flex justify-content-center'>
+  <div class='languages d-flex justify-content-center'>
     <% @user.all_languages.each do |language| %>
       <div class='language-each mx-2'>
         <%= language %>
@@ -38,30 +42,39 @@
       <li class="nav-item" role="presentation">
         <button class="nav-link" id="hard-skills-tab" data-bs-toggle="tab" data-bs-target="#hard-skills" type="button" role="tab" aria-controls="hard-skills" aria-selected="false">Hard Skills</button>
       </li>
-      <li>
-        <button type="button" class="nav-item" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          +
-        </button>
-      </li>
     </ul>
 
 
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
-        <ul>
+        <ul style="list-style: none; padding-left:0px">
           <% @user.skills.soft_skills.each do |skill| %>
             <li><%= skill.name %></li>
           <% end %>
         </ul>
       </div>
       <div class="tab-pane fade" id="hard-skills" role="tabpanel" aria-labelledby="hard-skills-tab">
-        <ul list-style: none>
+        <ul style="list-style: none; padding-left:0px">
           <% @user.skills.hard_skills.each do |skill| %>
             <li><%= skill.name %></li>
-        <% end %>
-      </ul>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
+
+<div data-controller="skill">
+  <button data-action="click->skill#toggle">Ajouter une compétence</button>
+
+  <div data-skill-target="form" class="d-none">
+    <%= simple_form_for @user_skill do |f| %>
+      <%= f.input :skill, collection: Skill.all.reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "skill-selector" },
+            item_wrapper_class: 'skill-item' %>
+      <%= f.submit "+", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
 </div>
 
 
