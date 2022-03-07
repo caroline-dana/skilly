@@ -12,6 +12,7 @@ Match.destroy_all
 JobOffer.destroy_all
 User.destroy_all
 Company.destroy_all
+Skill.destroy_all
 
 def get_image(image)
   File.open(File.join(File.dirname(__FILE__), "../app/assets/images/#{image}"))

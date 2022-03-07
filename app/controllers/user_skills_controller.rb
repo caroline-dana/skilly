@@ -1,9 +1,10 @@
 class UserSkillsController < ApplicationController
   def create
     @user = current_user
-    @user_skill = UserSkill.new(user_skill_params)
-    @user_skill.user = @user
-    @user_skill.save!
+    @skills = Skill.where(id: params[:user_skill][:skill])
+    @skills.each do |skill|
+      @user_skill = UserSkill.create!(skill: skill, user: current_user)
+    end
     redirect_to user_path(@user)
   end
 
