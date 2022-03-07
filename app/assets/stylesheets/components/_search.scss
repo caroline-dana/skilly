@@ -1,23 +1,25 @@
 .search-bar {
+
   border: 2px solid #1E2CFB;
   border-radius: 50px;
   color: #1E2CFB;
   width: 260px;
   overflow: hidden;
+
   div {
     margin: 0 !important;
   }
 }
 .form-control {
-  background-color: transparent;
+  background-color: brown;
   border: 0px;
   margin: 0;
   &::placeholder {
-    // color: whitesmoke;
+
     text-align: center;
   }
   &:focus {
-    background-color: #F3D0FF;
+    background-color: brown;
     outline: 0;
     box-shadow: none;
   }

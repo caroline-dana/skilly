@@ -14,7 +14,7 @@
 
 .container-head {
   display: flex;
-   justify-content: space-around;
+  justify-content: space-around;
 }
 
 .container-skill {
@@ -61,6 +61,9 @@
   margin-right: 25px;
 }
 
+.skills {
+  height: 45%;
+}
 
 .values {
   border: 1px solid #1E2CFB;
@@ -104,10 +107,4 @@
 
 .tab-content {
   color: #1E2CFB;
-}
-
-.container-wrapping-login {
- background-color: #F3D0FF;
- height: 100vh;
-
 }
