@@ -48,8 +48,35 @@ file = get_image("logo-skello.png")
 company_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 company_2.save!
 
-# Lydia
+# Pelico
 company_3 = Company.create(
+  name: "Pelico",
+  city: "Paris",
+  employees: 50,
+  description: "Pelico aide les manufacturers à améliorer leurs performances opérationnelles grâce à la data. La data reste une source de valeur inexploitée pour les manufacturers: les entreprises qui les exploitent avec succès dans leurs opérations constatent des niveaux d'efficacité inégalés grâce à des informations plus granulaires et à une prise de décision quotidienne optimale.",
+  recruiter_message: "Prêt.e pour une step up dans ta carrière? Rejoins-nous !"
+)
+
+file = get_image("pelico-logo.png")
+company_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_3.save!
+
+
+# 360Learning
+company_4 = Company.create(
+  name: "360 Learning",
+  city: "Paris",
+  employees: 300,
+  description: "360Learning permet aux équipes Formation de piloter la culture et décupler la croissance de l’entreprise grâce au Collaborative Learning. La plateforme 360Learning intègre le pouvoir du collaboratif au cœur d’un LMS moderne pour miser sur l'intelligence collective.",
+  recruiter_message: "A la recherche de la perle rare avec une connaissance solide en EdTech et l'envie de faire bouger les choses !"
+)
+
+file = get_image("360learning-logo.png")
+company_4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_4.save!
+
+# Lydia
+company_5 = Company.create(
   name: "Lydia",
   city: "Paris",
   employees: 200,
@@ -58,8 +85,8 @@ company_3 = Company.create(
 )
 
 file = get_image("logo-lydia.png")
-company_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
-company_3.save!
+company_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_5.save!
 
 puts 'seeding companies done'
 
@@ -106,7 +133,7 @@ value_7 = Skill.create(name: "Partage", category: "values")
 value_8 = Skill.create(name: "Engagement", category: "values")
 value_9 = Skill.create(name: "Passion", category: "values")
 value_10 = Skill.create(name: "Culture résultat", category: "values")
-value_11 = Skill.create(name: "proximité", category: "values")
+value_11 = Skill.create(name: "Proximité", category: "values")
 value_12 = Skill.create(name: "Liberté d'expression", category: "values")
 value_13 = Skill.create(name: "Responsabilisation", category: "values")
 value_14 = Skill.create(name: "Indépendance", category: "values")
@@ -135,10 +162,13 @@ job_offer_1 = JobOffer.new(
   company: company_1,
   city: "Paris",
   contracttype: "CDI",
-  description: "Vos missions : Recueillir des insights sur les problématiques Marketing et les traduire en opportunités.
-  Définir la stratégie et l'ambition associée. Construire la feuille de route des fonctionnalités.
-  Collaborer avec l'ingénierie au sein d'une équipe pour exécuter la feuille de route.
-  Communiquer sur le plan de l'équipe et les réalisations au sein de BlaBlaCar.",
+  description: "En tant que chef de produit pour l'automatisation du marketing, vous serez chargé de construire les meilleurs outils du secteur pour soutenir nos efforts d'acquisition. Intégré dans une équipe, travaillant avec des ingénieurs seniors et des data scientists, vous devrez construire l'avenir de nos outils de marketing. Vous serez responsable de l'ensemble du projet, de la définition de la stratégie à la feuille de route et à l'expédition des fonctionnalités.
+  Vos missions:
+  - Recueillir des insights sur les problématiques Marketing et les traduire en opportunités actionnables qui permettraient d'améliorer leurs performances.
+  - Définir la stratégie et l'ambition associée
+  - Construire la feuille de route associée pour la réaliser
+  - Collaborer avec l'ingénierie au sein d'une équipe pour exécuter la feuille de route.
+  - Communiquer sur le plan de l'équipe et les réalisations au sein de BlaBlaCar.",
   languages: "Français Anglais",
   years_of_experience: "5",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
@@ -156,9 +186,11 @@ job_offer_2 = JobOffer.new(
   company: company_2,
   city: "Paris",
   contracttype: "CDI",
-  description: "Vos missions : Analyser nos performances, identifiez les principaux pain points. Définir la feuille de route de conversion du site web.
-  Identifiez & priorisez les projets, fonctionnalités & idées pertinentes. Améliorer les KPI de conversion, méthode de test A/B. Obtenir des insights sur notre produit.
-  S'assurer que nos pages de destination soient à jour.",
+  description: "En tant que premier Product Owner de l'équipe, vous jouerez un rôle clé dans l'évolution de notre stratégie de croissance et aurez l'opportunité d'apporter de la valeur à Skello dès le premier jour !
+  Vos missions :
+  - Analyser nos performances : vous identifiez les principaux et pain points sur nos chemins de conversion avec des données qualitatives & quantitatives et mesurez l'impact de nouvelles actions.
+  - Définir la feuille de route de conversion du site web/des landings: vous identifiez & priorisez les projets, fonctionnalités & idées pertinentes pour augmenter notre conversion pour nos 5 marchés (France, Espagne, Allemagne, Suisse & Belgique).
+  - Améliorer les KPI de conversion : vous développez une méthode de test A/B pour tester de nouvelles idées, obtenir des insights et améliorer continuellement les taux de conversion du site web (landing pages), mais aussi sur notre produit (post sign-up).",
   languages: "Français Anglais",
   years_of_experience: "5",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
@@ -170,25 +202,76 @@ file = get_image("logo-skello.png")
 job_offer_2.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 job_offer_2.save!
 
-# Lydia
+# Pelico
 job_offer_3 = JobOffer.new(
   job_title: "Product Owner",
   company: company_3,
   city: "Paris",
   contracttype: "CDI",
-  description: "Vos missions : Surveiller les performances à l'aide d'analyses. Définir les évolutions et les améliorations du produit.
-  Rédiger des User Stories. Tester les nouvelles fonctionnalités. Créer la documentation sur les fonctionnalités.
-  Communiquer en interne sur les fonctionnalités et leurs évolutions. Participer à la définition de la feuille de route.",
+  description: "En tant que Product Owner, vous serez le garant du développement des fonctionnalités de l'équipe et menerez votre équipe vers la réalisation des objectifs de votre roadmap.
+  Les missions:
+  - Gérer et prioriser votre roadmap en collaboration avec le CPO et le Senior Product Manager.
+  - En partenariat avec les Product Designers, mener des initiatives de découverte de produits pour identifier et comprendre en profondeur les besoins, les pain points des utilisateurs, les opportunités pour Pelico.
+  - Imaginer des fonctionnalités pour répondre à notre vision et aux besoins des clients tout en assurant la conformité avec la feuille de route du produit.
+  - Résoudre des problèmes et créer de la valeur : nous recherchons des personnes dont l'objectif est d'apporter de la valeur à nos utilisateurs, en formulant des problèmes complexes, en définissant une vision convaincante et en menant au résultat.",
   languages: "Français Anglais",
-  years_of_experience: "8",
+  years_of_experience: "7",
   question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
   question2: "Comment collectez-vous les retours utilisateurs ?",
   question3: "Comment validez-vous une nouvelle UX ou interface ?"
 )
 
-file = get_image("logo-lydia.png")
+file = get_image("pelico-logo.png")
 job_offer_3.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 job_offer_3.save!
+
+# 360 Learning
+job_offer_4 = JobOffer.new(
+  job_title: "Product Owner",
+  company: company_3,
+  city: "Paris",
+  contracttype: "CDI",
+  description: "Notre équipe Produit est composée de Product Managers et Product Owners. Chaque Product Manager travaille avec un Product Designer et 3 à 6 Software Engineers sur une feuille de route ambitieuse. Les Product Managers s'engagent à maintenir notre avance en matière d'apprentissage collaboratif.
+  Les missions:
+  - Rédiger les spécifications des fonctionnalités et les user stories
+  - Gérer la roadmap et le product backlog de votre équipe.
+  - Assurer la livraison efficace et en temps voulu des nouvelles fonctionnalités
+  - Assister aux users feedbacks et adapter les solutions en conséquence
+  - Collaborer avec d'autres stakeholders clés comme les autres Product Managers, les Engineering Managers et les Product Designers",
+  languages: "Français Anglais",
+  years_of_experience: "9",
+  question1: "Quelle méthode privilégiez vous ? Scrum, Kanban, Scrumban ? Autres ?",
+  question2: "Comment collectez-vous les retours utilisateurs ?",
+  question3: "Comment validez-vous une nouvelle UX ou interface ?"
+)
+
+file = get_image("360learning-logo.png")
+job_offer_4.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+job_offer_4.save!
+
+# Lydia
+job_offer_5 = JobOffer.new(
+  job_title: "Product Owner",
+  company: company_5,
+  city: "Paris",
+  contracttype: "CDI",
+  description: "Au sein de l'équipe produit, vous travaillerez sur un périmètre dédié de fonctionnalités et avec de nombreuses équipes de l'entreprise (data, juridique, marketing, tech, opérations...) pour améliorer la valeur apportée aux utilisateurs par vos fonctionnalités.
+  Les missions :
+  - Comprendre les utilisateurs via des analyses de marché, des entretiens avec les utilisateurs, des analyses comportementales et une collaboration avec les équipes du service client et des ventes.
+  - Surveiller les performances et la convivialité des fonctionnalités à l'aide d'analyses.
+  - Communiquer en interne sur vos fonctionnalités, leurs évolutions et la vision du produit qu'elles portent.
+  - S'assurer que vos fonctionnalités sont correctement communiquées aux utilisateurs, en collaboration avec l'équipe CRM et Marketing.
+  - Participer à la définition de la feuille de route",
+  languages: "Français Anglais",
+  years_of_experience: "8",
+  question1: "Préférez-vous Scrum ou Kanban ?",
+  question2: "Quelle place occupez-vous dans une team ?",
+  question3: "Quelle est votre chanson préférée ?"
+)
+
+file = get_image("logo-lydia.png")
+job_offer_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+job_offer_5.save!
 
 puts 'seeding job offers done'
 
@@ -206,5 +289,5 @@ puts 'seeding job skills done'
 
 puts 'seeding job likes'
 # Lydia
-job_like_3 = JobLike.create(user: user_1, job_offer: job_offer_3, status: true)
+job_like_5 = JobLike.create(user: user_1, job_offer: job_offer_5, status: true)
 puts 'seeding job likes done'
