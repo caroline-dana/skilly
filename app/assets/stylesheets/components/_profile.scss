@@ -1,0 +1,26 @@
+.skill-item {
+  display: inline-block;
+}
+
+.skill-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.skill-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.7rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: #F3D0FF;
+  color: #1E2CFB;
+  border: 1px solid #1E2CFB;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.skill-selector:checked + label {
+  background-color: #1E2CFB;
+  color: white;
+}
