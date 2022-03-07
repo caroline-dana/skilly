@@ -10,7 +10,7 @@
 }
 
 .form-control {
-  background-color: transparent;
+  background-color: brown;
   border: 0px;
   margin:0;
   &::placeholder {
@@ -18,14 +18,14 @@
     text-align: center;
   }
   &:focus {
-    background-color: transparent;
+    background-color: brown;
     outline: 0;
     box-shadow: none;
   }
 }
 
 .postfix {
-  background-color: transparent;
+  background-color: brown;
   color: whitesmoke;
   border: none;
   i {

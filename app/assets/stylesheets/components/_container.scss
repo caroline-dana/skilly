@@ -14,7 +14,7 @@
 
 .container-head {
   display: flex;
-   justify-content: space-around;
+  justify-content: space-around;
 }
 
 .container-skill {
@@ -54,9 +54,6 @@
   align-items: center;
 }
 
-.values-languages {
-  height: 20%;
-}
 
 .skills {
   height: 45%;
@@ -78,10 +75,4 @@
   align-self: center;
   padding: 5px 8px;
   margin-bottom: 15px;
-}
-
-.container-wrapping-login {
- background-color: #F3D0FF;
- height: 100vh;
-
 }
