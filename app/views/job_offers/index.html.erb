@@ -5,6 +5,8 @@
   <div class="cards-container justify-content-around">
     <% @job_offers.each do |job_offer| %>
       <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
+
+
           <div class="container-head">
             <%= cl_image_tag job_offer.photo.key, class:"avatar-head" %>
             <p class="title-index mt-5"><strong><%= job_offer.job_title %></strong></p>
@@ -40,10 +42,12 @@
               <li class="mb-1"> <%= job_offer.years_of_experience %> ans requis</li>
             </div>
 
-            <li class="mb-1"><%= job_offer.description %></li>
-            <li>
-              <%= link_to "Plus d'infos sur cette entreprise", "", class: "btn btn-outline-dark d-flex justify-content-center mt-4" %>
-            </li>
+            <ul>
+              <% job_offer.description.split('-').each do |word| %>
+                <li class="mb-1"><%= word %></li>
+              <% end %>
+            </ul>
+
             <li><% job_offer.question1 %></li>
             <li><% job_offer.question2 %></li>
             <li><% job_offer.question3 %></li>
@@ -54,6 +58,8 @@
           <% link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post, "data-swipe-target" => "nopeBtn" %>
         </div>
       </div>
+
+
     <% end %>
   </div>
 </div>
