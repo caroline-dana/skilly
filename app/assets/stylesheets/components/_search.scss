@@ -1,34 +1,35 @@
-.search-bar {
-  border: 2px solid whitesmoke;
-  background: rgba(0, 0, 0, 0);
-  border-radius: 50px;
-  color: whitesmoke;
-  width: 400px;
-  div {
-    margin: 0 !important;
-  }
-}
+// .search-bar {
+//   border: 2px solid #1E2CFB;
+//   background-color: #f2ff42;
+//   border-radius: 50px;
+//   color: #1E2CFB;
+//   width: 330px;
+//   height: 65px;
+//   div {
+//     margin: 0 !important;
+//   }
+// }
 
-.form-control {
-  background-color: transparent;
-  border: 0px;
-  margin:0;
-  &::placeholder {
-    color: whitesmoke;
-    text-align: center;
-  }
-  &:focus {
-    background-color: transparent;
-    outline: 0;
-    box-shadow: none;
-  }
-}
+// .form-control {
+//   background-color: transparent;
+//   border: 0px;
+//   margin:0;
+//   &::placeholder {
+//     color: whitesmoke;
+//     text-align: center;
+//   }
+//   &:focus {
+//     background-color: transparent;
+//     outline: 0;
+//     box-shadow: none;
+//   }
+// }
 
-.postfix {
-  background-color: transparent;
-  color: whitesmoke;
-  border: none;
-  i {
-    font-size:32px;
-  }
-}
+// .postfix {
+//   background-color: transparent;
+//   color: whitesmoke;
+//   border: none;
+//   i {
+//     font-size:32px;
+//   }
+// }
