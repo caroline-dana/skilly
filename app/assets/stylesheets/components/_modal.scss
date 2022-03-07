@@ -1,0 +1,20 @@
+.modal-content{
+  border: none;
+  height: 100%;
+}
+
+.modal-dialog{
+  height: 100%;
+}
+
+.modal {
+	bottom: 0 ;
+	top: auto;
+	height: 80%;
+  border-radius: 10px 10px 0 0;
+}
+
+.fade.modal{
+  box-shadow: 0px 5px 15px transparent;
+  transition: opacity 0.15s linear, box-shadow 3s ease;
+}
