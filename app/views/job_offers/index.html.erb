@@ -10,24 +10,25 @@
           <div class="container-head">
             <%= cl_image_tag job_offer.photo.key, class:"avatar-head" %>
             <p class="title-index mt-5"><strong><%= job_offer.job_title %></strong></p>
+            <p class="title-index mt-5"><%= job_offer.company.name %></p>
           </div>
 
           <ul style="list-style: none;padding: 15px;margin: 20px 0;">
-              <li class="container-li">Soft skills </li>
+              <%# <li class="container-li">Soft skills </li> %>
               <div class="container-skill">
                 <% job_offer.soft_skills.each do |soft|%>
                   <div class="skills"><%= soft.name %></div>
                 <% end %>
               </div>
 
-              <li class="container-li">Hard skills </li>
+              <%# <li class="container-li">Hard skills </li> %>
               <div class="container-skill">
                 <% job_offer.hard_skills.each do |hard| %>
                   <div class="skills"><%= hard.name %></div>
                 <% end %>
               </div>
 
-              <li class="container-li">Les valeurs </li>
+              <%# <li class="container-li">Les valeurs </li> %>
               <div class="container-skill">
                 <% job_offer.values.each do |value|  %>
                   <div class="skills"><%= value.name %></div>
