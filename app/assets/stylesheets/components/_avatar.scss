@@ -1,7 +1,8 @@
 .avatar-large {
-  width: 45px;
+  width: 80px;
   border-radius: 50%;
   margin: 8px;
+  border: 2px solid #1E2CFB;
 }
 
 .avatar-head {
@@ -17,4 +18,16 @@
   width: 78px;
   border-radius: 50%;
   margin-top: 10px;
+}
+
+.avatar-home {
+  width: 45px;
+  border-radius: 50%;
+
+
+  .img {
+      height: 100%;
+      width: 120px;
+      object-fit: cover
+  }
 }

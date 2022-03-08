@@ -1,43 +1,52 @@
-.search-bar {
-
+.form-inline {
+  background-color: none;
   border: 2px solid #1E2CFB;
-  border-radius: 50px;
-  color: #1E2CFB;
-  width: 260px;
-  overflow: hidden;
+  border-radius: 10%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 
-  div {
-    margin: 0 !important;
+  .form-control {
+    color: #1E2CFB;
+    background-color: transparent;
+    width: 40vh;
+    border-top: 0px solid transparent;
+    border-left: 0px solid transparent;
+    border-right: 0px solid transparent;
+    border-bottom: 2px solid #1E2CFB;
+
+    &::placeholder {
+      color: #1E2CFB;
+      text-align: left;
+      background-color: transparent;
+    }
+
+    &:focus{
+      box-shadow: none;
+     }
+  }
+
+  .postfix {
+    border: none;
+  }
+
+  .yellow-btn {
+    border: 2px solid #1E2CFB;
+    color: #1E2CFB;
+    background-color: #F0F643;
+    border-radius: 10px;
+    padding: 10px;
+    width: 35vh;
+    height: 8vh;
+
+  }
+
+  .form-actions {
+    display: flex;
+    justify-content: center;
   }
 }
-.form-control {
-  background-color: brown;
-  border: 0px;
-  margin: 0;
-  &::placeholder {
-
-    text-align: center;
-  }
-  &:focus {
-    background-color: brown;
-    outline: 0;
-    box-shadow: none;
-  }
-
-  .log{
-    border-right:1px solid red ;
-  }
-}
-.postfix {
-  background-color: #F3D0FF;
-  color: whitesmoke;
-  border: none;
-  i {
-    font-size:32px;
-  }
-}
-
-
 
 
 
