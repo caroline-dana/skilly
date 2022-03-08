@@ -8,25 +8,33 @@
 
   .form-control {
     color: #1E2CFB;
-    font-weight: bold;
+    // font-weight: 100;
     text-align: center;
-    background-color: whitesmoke;
+    background-color: #F3D0FF;
     height: 8vh;
     border-top: 0px solid transparent;
     border-left: 0px solid transparent;
     border-right: 0px solid transparent;
     border-bottom: 2px solid transparent;
-    border-radius: 5px;
+    border-radius: 12px;
+    margin: auto;
+    width: 300px;
+    margin-bottom: -11px;
+    border: 2px solid #1E2CFB;
 
     &::placeholder {
       color: #1E2CFB;
       text-align: center;
       background-color: transparent;
+      font-weight: 300;
     }
-
     &:focus{
       box-shadow: none;
      }
+     &:focus::placeholder {
+      color: transparent;
+    }
+
   }
 
   .postfix {
@@ -35,14 +43,13 @@
 
   .yellow-btn {
     border: 2px solid #F0F643;
-    font-weight: bold;
+    font-weight: 500;
     color: #1E2CFB;
     background-color: #F0F643;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
-    width: 100%;
-    height: 8vh;
-
+    width: 50%;
+    height: 7vh;
   }
 
   .form-actions {
