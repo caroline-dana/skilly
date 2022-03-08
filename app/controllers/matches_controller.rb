@@ -11,7 +11,7 @@ class MatchesController < ApplicationController
 
   def book_date
     @match = Match.last
-    @time = DateTime.new(2022, 3, 7, 17, 0, 0)
+    @time = DateTime.new(2022, 3, 14, 16, 0, 0)
     #@time.hour = 17
     @match.callbooking = @time
     @match.save

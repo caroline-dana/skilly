@@ -2,4 +2,52 @@
   font-size: calc(0.800rem + 0.9vw);
   font-weight: 500;
   margin-top: 15px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  color: #2A4AFB;
+}
+
+.top-dasboard {
+  display: flex;
+  align-items: center;
+  background-color:#2A4AFB;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  height:150px;
+}
+
+.call {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  color: #2A4AFB;
+}
+
+.card-dashboard {
+  overflow: hidden;
+  background: #F7F7FF;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  margin: 15px;
+  border-radius: 25px;
+}
+
+.card-dashboard img {
+  height: 57px;
+  width: 58px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.card-dashboard-wait img {
+  height: 57px;
+  width: 58px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+.scroll {
+ padding-bottom: 65px;
 }
