@@ -1,7 +1,7 @@
 import { Controller } from "stimulus";
 import Hammer from 'hammerjs';
 import { csrfToken } from "@rails/ujs";
-import swal from 'sweetalert';
+import Swal from 'sweetalert2';
 
 
 export default class extends Controller {
@@ -29,7 +29,14 @@ export default class extends Controller {
           console.log(data.status);
           console.log(data.match);
           if (data.status === "match") {
-            swal({text: "It's a match!", className: "alert-design"}).then(()=> {
+            Swal.fire({title: "It's a match!",
+            text: 'Le recruteur a quelques questions pour vous',
+            imageUrl: 'https://avatars.githubusercontent.com/u/95220236?v=4',
+            imageWidth: 88,
+            imageHeight: 88,
+            imageAlt: 'Custom image',
+            showCloseButton: true,
+            className: "alert-design"}).then(()=> {
               console.log(data.match);
               window.location.href = `/matches/${data.match}`;
             });;
