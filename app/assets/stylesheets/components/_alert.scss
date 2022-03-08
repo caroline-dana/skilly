@@ -12,19 +12,53 @@
   width: 296px;
 }
 
-.swal-button{
-  background-color: #F3D0FF;
-  border: 1px solid  #53FFC4;
-  border-radius: 38px;
-  color: #1E2CFB;
-  font-size: 16px;
+.swal2-title{
+  display: block !important;
+  color: #1E2CFB !important;
+  margin-top: -38px !important;
+  font-size: 36px !important;
+  margin-top: 110px !important;
 }
 
-.swal-text{
-  font-size: 39px;
-  color: #1E2CFB;
+.swal2-styled.swal2-confirm {
+  color: #1E2CFB !important;
+  background-color: #F2FF42 !important;
+  font-size: 1em;
+  width: 111px;
+  height: 48px;
+  border: 2px solid #1E2CFB !important;
+  border-radius: 50px !important;
+}
+
+.swal2-html-container{
+  color: #1E2CFB !important;
 }
 
 .swal-overlay{
   background-color: #F7F7F7;
+}
+.swal2-popup {
+  position:relative;
+  border-radius: 15px !important;
+  border-radius: 15px !important;
+  background-color: #F3D0FF !important;
+  max-width: 94% !important;
+}
+.swal2-popup::before {
+  background-image: url(https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138);
+  background-size: 88px 88px;
+  color: transparent;
+  width: 88px;
+  height: 88px;
+  content: 'some content';
+  position: absolute;
+  left: 48%;
+  top: 32px;
+}
+
+.swal2-image{
+  position: absolute;
+  left: 28%;
+  top: 0px;
+  border-radius: 100%;
 }
