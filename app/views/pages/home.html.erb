@@ -1,36 +1,42 @@
-<div class="navbar-picture mb-3" style="height: 56px;">
-  <img class="avatar-large" alt="avatar-large" src="https://kitt.lewagon.com/placeholder/users/arthur-lit">
-</div>
+<div class="h-100" style="background-color: #F3D0FF;">
 
-<div class="container-home-page">
-  <h1 class="hello-title"> Hello Aurore<%=  %> </h1>
-
-  <div class="search-box">
-    <%= simple_form_for :search, url: job_offers_path, method: :get, html: {class: 'form-inline' } do |f|  %>
-      <div class="d-flex justify-content-center align-items-center mt-3">
-        <div class="d-flex align-items-center search-bar">
-          <%= f.input :job_title, label: false, placeholder: 'Votre job ?', class: "form-control" %>
-          <%= f.input :city, label: false, placeholder: 'Où ?', class: "form-control" %>
-          <%= f.input :contracttype, label: false, placeholder: 'Contrat ?', class: "form-control" %>
-        </div>
-
-        <%= button_tag :submit, class: "button postfix" do %>
-            <i class="fas fa-search"></i>
-       <% end %>
-      </div>
-    <% end %>
+  <div class="navbar-picture d-flex justify-content-end">
+    <img class="avatar-large" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
   </div>
 
-  <div class="container-follow mt-4">
+    <h1 class="hello-title"> Hello Aurore</h1>
+
+    <%= simple_form_for :search, url: job_offers_path, method: :get, :html=> { class: 'form-inline' } do |f|  %>
+      <div class="d-flex p-3 flex-column align-items-center justify-content-center">
+        <div class="d-flex align-items-center search-bar me-3">
+          <%= f.input :job_title, label: false, placeholder: 'Job ?', class:"log" %>
+          <%= f.input :city, label: false, placeholder: 'Où ?' %>
+          <%= f.input :contracttype, label: false, placeholder: 'Contrat ?' %>
+        </div>
+        <%= button_tag :submit, class: "yellow-btn mt-3" do %>
+            <%# <i class="fas fa-search"></i> %>
+            <p class="m-0">Rechercher</p>
+        <% end %>
+    <% end %>
+</div>
+
+
+
+
+
+
+
+
+  <%# <div class="container-follow mt-4">
     <h2>Entreprises à suivre</h2>
     <div class="card-product d-flex justify-content-around mt-4">
       <img src="https://www.trouverunassureur.com/wp-content/uploads/2018/12/logo-lydia.jpg" />
       <img src="https://media.glassdoor.com/sqll/2866657/brigad-squarelogo-1560766065791.png" />
       <img src="https://pbs.twimg.com/profile_images/946661478630940673/BzlIV0Ls_400x400.jpg" />
     </div>
-  </div>
+  </div> %>
 
-  <div class="container mt-4">
+  <%# <div class="container mt-4">
     <h2>Formations partenaire</h2>
     <div class="card-product mt-3 mb-3">
       <img src="https://pbs.twimg.com/profile_images/1411940871575064576/ySvn5TyT_400x400.jpg" />
@@ -47,4 +53,4 @@
       </div>
     </div>
   </div>
-</div>
+</div> %>
