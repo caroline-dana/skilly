@@ -1,0 +1,7 @@
+# config/meta.yml
+
+meta_product_name: "Skilly-App"
+meta_title: "Skilly-App - Swipe the right skills at the right time"
+meta_description: "Skilly-App matches users with companies based on their soft and hard skills"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+twitter_account: "@Skilly-App_twitter_account"   # required for Twitter Cards
