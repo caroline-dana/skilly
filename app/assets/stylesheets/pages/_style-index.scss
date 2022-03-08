@@ -26,8 +26,13 @@
 
 .job-description {
   color: #1E2CFB;
-  margin-left: 3px;
+  margin-left: -2px;
   margin-right: 2px;
   padding: 7px;
   font-size: 12px;
+  text-align: justify;
+}
+
+.no-puce {
+  list-style-type: none;
 }

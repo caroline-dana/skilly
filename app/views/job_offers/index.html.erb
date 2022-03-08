@@ -37,9 +37,14 @@
                   <% end %>
                 </div>
 
-              <ul>
-                <% job_offer.description.split('-').each do |word| %>
-                  <li class="job-description"><%= word %></li>
+
+                <% job_offer.description.split('-').each_with_index do |word, index| %>
+                  <% if index == 0 %>
+                    <p  class="job-description"><%= word %></p>
+                    <ul>
+                  <% else %>
+                    <li class="job-description <%= "no-puce" if index == 0 %>"><%= word %></li>
+                  <% end %>
                 <% end %>
               </ul>
 
