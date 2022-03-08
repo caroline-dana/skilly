@@ -1,19 +1,17 @@
-<div class="h-100 " style="background-color: #F3D0FF;">
-  <div class="d-flex align-items-center">
-    <img class="avatar-large" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
-    <div>
-    <h1 class="hello-title"> Hello Aurore</h1>
-    <p>Bon retour parmi nous !</p>
-    </div>
+
+<div class="home-container" style="background-color: #F3D0FF;">
+  <div class="d-flex align-items-center" style="align-self: flex-start;">
+      <img class="avatar-home" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
+      <h1 class="hello-title">Hello Aurore</h1>
+
   </div>
+<p class="hello-paragraph">Trouve le job de tes rêves</p>
 
     <%= simple_form_for :search, url: job_offers_path, method: :get, :html=> { class: 'form-inline' } do |f|  %>
-      <div class="d-flex p-3 flex-column align-items-center justify-content-center">
-        <div class=" align-items-center search-bar me-3">
+      <div class="form-container">
           <%= f.input :job_title, label: false, placeholder: 'Quel job recherchez-vous ?' %>
           <%= f.input :city, label: false, placeholder: 'Dans quelle ville ?' %>
           <%= f.input :contracttype, label: false, placeholder: 'Quel type de contrat ?' %>
-        </div>
         <%= button_tag :submit, class: "yellow-btn mt-3" do %>
             <%# <i class="fas fa-search"></i> %>
             <p class="m-0">Rechercher</p>
