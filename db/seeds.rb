@@ -89,6 +89,19 @@ file = get_image("logo-lydia.png")
 company_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 company_5.save!
 
+# Altice Media
+company_6 = Company.create(
+  name: "Altice Media",
+  city: "Paris",
+  employees: 200,
+  description: "Altice a pour mission de rendre l’expérience du paiement aussi simple que possible, pour tous. En exploitant le meilleur des nouvelles technologies pour créer des solutions de paiement mobile intuitives, sécurisées et surtout universelles. Les services proposés sont nombreux : carte de paiement, paiement mobile sans contact, cagnottes, comptes partagés… Il y en a pour tous les goûts ! Lancée en 2013, Lydia est aujourd’hui leader du paiement mobile et compte plus de 3 millions d'utilisateurs en Europe (et plus de 4000 nouveaux chaque jour). Lydia est la 22ème licorne de la French Tech ! ",
+  recruiter_message: "Nous cherchons des talents pour nous inspirer et que nous inspirons. Rejoins-nous, aide-nous à construire une application parfaite"
+)
+
+file = get_image("Altice_logo.png")
+company_6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+company_6.save!
+
 puts 'seeding companies done'
 
 puts 'seeding skills'
@@ -274,10 +287,34 @@ file = get_image("logo-lydia.png")
 job_offer_5.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 job_offer_5.save!
 
+# Altice Media
+job_offer_6 = JobOffer.new(
+  job_title: "Product Owner",
+  company: company_6,
+  city: "Paris",
+  contracttype: "CDI",
+  description: "Au sein de l'équipe produit, vous travaillerez sur un périmètre dédié de fonctionnalités et avec de nombreuses équipes de l'entreprise (data, juridique, marketing, tech, opérations...) pour améliorer la valeur apportée aux utilisateurs par vos fonctionnalités.
+  Les missions :
+  - Comprendre les utilisateurs via des analyses de marché, des entretiens avec les utilisateurs, des analyses comportementales et une collaboration avec les équipes du service client et des ventes.
+  - Surveiller les performances et la convivialité des fonctionnalités à l'aide d'analyses.
+  - Communiquer en interne sur vos fonctionnalités, leurs évolutions et la vision du produit qu'elles portent.
+  - S'assurer que vos fonctionnalités sont correctement communiquées aux utilisateurs, en collaboration avec l'équipe CRM et Marketing.
+  - Participer à la définition de la feuille de route",
+  languages: "Français Anglais",
+  years_of_experience: "8",
+  question1: "Préférez-vous Scrum ou Kanban ?",
+  question2: "Quelle place occupez-vous dans une team ?",
+  question3: "Quelle est votre chanson préférée ?"
+)
+
+file = get_image("Altice_logo.png")
+job_offer_6.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
+job_offer_6.save!
+
 puts 'seeding job offers done'
 
 puts 'seeding job skills'
-[job_offer_1, job_offer_2, job_offer_3, job_offer_4].each do |job_offer|
+[job_offer_1, job_offer_2, job_offer_3, job_offer_4, job_offer_6].each do |job_offer|
   [soft_skill_4, soft_skill_5, soft_skill_6, hard_skill_1, hard_skill_2, hard_skill_3, value_4, value_5, value_6,].each do |skill|
     JobSkill.create(job_offer: job_offer, skill: skill)
   end
