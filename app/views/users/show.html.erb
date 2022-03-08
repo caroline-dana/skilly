@@ -52,6 +52,17 @@
             <li><%= skill.name %></li>
           <% end %>
         </ul>
+        <div data-controller="skill">
+          <button data-action="click->skill#toggle">Ajouter une compétence</button>
+
+          <div data-skill-target="form" class="d-none">
+            <%= simple_form_for @user_skill do |f| %>
+              <%= f.input :skill, collection: Skill.where(category: "soft_skill").reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "skill-selector" },
+                    item_wrapper_class: 'skill-item' %>
+              <%= f.submit "+", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
       </div>
       <div class="tab-pane fade" id="hard-skills" role="tabpanel" aria-labelledby="hard-skills-tab">
         <ul style="list-style: none; padding-left:0px">
@@ -59,21 +70,22 @@
             <li><%= skill.name %></li>
           <% end %>
         </ul>
+        <div data-controller="skill">
+          <button data-action="click->skill#toggle">Ajouter une compétence</button>
+
+          <div data-skill-target="form" class="d-none">
+            <%= simple_form_for @user_skill do |f| %>
+              <%= f.input :skill, collection: Skill.where(category: "hard_skill").reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "skill-selector" },
+                    item_wrapper_class: 'skill-item' %>
+              <%= f.submit "+", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-<div data-controller="skill">
-  <button data-action="click->skill#toggle">Ajouter une compétence</button>
 
-  <div data-skill-target="form" class="d-none">
-    <%= simple_form_for @user_skill do |f| %>
-      <%= f.input :skill, collection: Skill.all.reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "skill-selector" },
-            item_wrapper_class: 'skill-item' %>
-      <%= f.submit "+", class: "btn btn-primary" %>
-    <% end %>
-  </div>
-</div>
 
 </div>
 
