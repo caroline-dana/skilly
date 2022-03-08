@@ -5,8 +5,8 @@
 }
 
 .container-screen{
-  height: 100vh;
-  overflow: hidden;
+  // height: 100vh;
+  // overflow: hidden;
 }
 
 .container-head {
@@ -41,4 +41,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  padding: 20px 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  div {
+    width: 100%;
+  }
 }
