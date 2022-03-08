@@ -1,10 +1,16 @@
 
 <div class="simple-calendar">
   <div class="d-flex align-items-center justify-content-between">
-    <div class="calendar-heading my-2">
-      <%= link_to t('simple_calendar.previous', default: 'Précédent'), calendar.url_for_previous_view, class: 'btn btn-outline-primary' %>
-      <span class="calendar-title btn btn-primary"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
-      <%= link_to t('simple_calendar.next', default: 'Suivant'), calendar.url_for_next_view, class: 'btn btn-outline-primary' %>
+    <div class="calendar-heading mb-3 mx-4 d-flex justify-content-between align-items-center w-100">
+      <span class="month"><%= t('date.month_names')[start_date.month] %> <%= start_date.year %></span>
+      <div>
+        <%= link_to calendar.url_for_previous_view do %>
+        <i class="fas fa-angle-left"></i>
+        <% end %>
+        <%= link_to calendar.url_for_next_view do %>
+        <i class="fas fa-angle-right"></i>
+        <% end %>
+      </div>
     </div>
     <%#= link_to 'Mes calls', dashboard_path, class: 'btn btn-outline-warning' %>
   </div>
