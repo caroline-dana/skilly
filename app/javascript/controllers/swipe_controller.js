@@ -106,8 +106,6 @@ export default class extends Controller {
           this._resetIcons()
         }
 
-        // this._forbidScroll(el)
-
         el.classList.add('moving');
         el.classList.toggle('tinder_love', event.deltaX > 0);
         el.classList.toggle('tinder_nope', event.deltaX < 0);
