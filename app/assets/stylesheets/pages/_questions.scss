@@ -11,6 +11,7 @@
   font-size: 15px;
   color: #1E2CFB;
   margin-bottom: 0px;
+  margin-top: 20px;
 }
 
 .questions-form {
@@ -24,16 +25,18 @@
   padding-top: 20px;
   padding-bottom: 50px;
   width: 100%;
+  margin-bottom: -40px;
 
   .text {
     color: #1E2CFB;
     text-align: center;
     font-size: 15px;
+    font-weight: 200;
   }
 
   .form-control {
     color: #1E2CFB;
-    // font-weight: 100;
+    font-weight: 400;
     text-align: center;
     background-color: #F3D0FF;
     height: 8vh;
@@ -51,7 +54,6 @@
       color: #1E2CFB;
       text-align: center;
       background-color: transparent;
-      font-weight: 300;
       text-align: center;
     }
     &:focus{
@@ -59,6 +61,7 @@
      }
      &:focus::placeholder {
       color: transparent;
+      text-align: center;
     }
 
   }
