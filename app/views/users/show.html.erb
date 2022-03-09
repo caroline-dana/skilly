@@ -91,18 +91,14 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
      <div data-controller="skill">
-
-
         <%= simple_form_for @user_skill do |f| %>
           <%= f.input :skill, collection: Skill.where(category: "hard_skill").reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "my-3 skill-selector" },
                 item_wrapper_class: 'skill-item' %>
-
-      </div>
       <div class="modal-footer">
         <%= f.submit "+", class: "btn btn-new-skills" %>
       </div>
               <% end %>
-
+    </div>
     </div>
   </div>
 </div>
