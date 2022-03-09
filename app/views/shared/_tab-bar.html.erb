@@ -9,7 +9,7 @@
     <div class= "div-notification">
       <% @matches = Match.where(user: current_user).where(status: true).where(callbooking: nil) %>
       <% unless @matches.count == 0 %>
-        <div class= "button-notification"> 1 </div>
+        <div class= "button-notification-tab-bar"> 1 </div>
       <% end %>
        <i class="fas fa-tasks <%= "active-icon" if params[:controller] == 'dashboards' %>"></i>
     </div>
@@ -20,5 +20,3 @@
   <% end %>
 </div>
 <% end %>
-
-
