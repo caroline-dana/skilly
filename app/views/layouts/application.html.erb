@@ -36,7 +36,7 @@
   </head>
 
   <body>
-    <div class="container-screen">
+    <div class="container-screen <%= 'fixed-container' if params[:controller] == 'job_offers' && params[:action] == 'index' %>">
 
         <%#= render 'shared/flashes' %>
 

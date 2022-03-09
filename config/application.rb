@@ -15,6 +15,7 @@ module SKILLYApp
     end
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
+    config.hosts << /[a-z0-9\-]+\.ngrok\.io/
 
     # Configuration for the application, engines, and railties goes here.
     #

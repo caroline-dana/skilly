@@ -1,5 +1,5 @@
 <div class="h-100 " style="background-color: #F3D0FF;">
-  <div class='swipe-container' data-controller="swipe">
+  <div class='swipe-container posid' data-controller="swipe" >
     <div class="like-icon liked-unlike" data-swipe-target="like"><i class="check-icon fas fa-check"></i></i></i></div>
     <div class="unlike-icon liked-unlike" data-swipe-target="dislike"><i class="cross-icon fas fa-times"></i></div>
 
@@ -8,10 +8,10 @@
         <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
 
             <div class="container-head">
-            <div>
-              <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
-              <p class="title-index-company"><%= job_offer.company.name %></p>
-            </div>
+              <div>
+                <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
+                <p class="title-index-company"><%= job_offer.company.name %></p>
+              </div>
               <%= cl_image_tag job_offer.photo.key, class:"avatar-head" %>
             </div>
 
