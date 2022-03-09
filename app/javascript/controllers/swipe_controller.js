@@ -75,17 +75,17 @@ export default class extends Controller {
     hammertime.on('pan', (event) => {
       if (event.deltaX === 0 || event.center.x === 0 && event.center.y === 0) return;
 
-      if (event.additionalEvent === 'panleft') {
-        this.dislikeTarget.style.opacity = 1
-        this.likeTarget.style.opacity = 0
+      // if (event.additionalEvent === 'panleft') {
+      //   this.dislikeTarget.style.opacity = 1
+      //   this.likeTarget.style.opacity = 0
 
-        this._resetIcons()
-      } else {
-        this.dislikeTarget.style.opacity = 0
-        this.likeTarget.style.opacity = 1
+      //   this._resetIcons()
+      // } else {
+      //   this.dislikeTarget.style.opacity = 0
+      //   this.likeTarget.style.opacity = 1
 
-        this._resetIcons()
-      }
+      //   this._resetIcons()
+      // }
 
       el.classList.add('moving');
       el.classList.toggle('tinder_love', event.deltaX > 0);
