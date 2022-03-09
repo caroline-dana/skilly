@@ -1,12 +1,11 @@
 <div class="h-100 " style="background-color: #F3D0FF;">
-  <div class='swipe-container posid' data-controller="swipe" >
-    <div class="like-icon liked-unlike" data-swipe-target="like"><i class="check-icon fas fa-check"></i></i></i></div>
-    <div class="unlike-icon liked-unlike" data-swipe-target="dislike"><i class="cross-icon fas fa-times"></i></div>
+  <div class='swipe-container' data-controller="swipe">
 
     <div class="cards-container justify-content-around">
       <% @job_offers.each do |job_offer| %>
         <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
-
+          <div class="like-icon liked-unlike" data-swipe-target="like"><i class="check-icon fas fa-check"></i></div>
+          <div class="unlike-icon liked-unlike" data-swipe-target="dislike"><i class="cross-icon fas fa-times"></i></div>
             <div class="container-head">
               <div>
                 <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
@@ -52,7 +51,6 @@
               <li><% job_offer.question2 %></li>
               <li><% job_offer.question3 %></li>
             </ul>
-
           <div class="container d-flex justify-content-around">
             <% link_to 'LIKE', job_offer_user_likes_path(job_offer), method: :post, "data-swipe-target" => "likeBtn" %>
             <% link_to 'DISLIKE', job_offer_user_likes_path(job_offer, dislike: true), method: :post, "data-swipe-target" => "nopeBtn" %>

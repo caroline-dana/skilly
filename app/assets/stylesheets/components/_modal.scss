@@ -1,10 +1,15 @@
 .modal-content{
   border: none;
   height: 100%;
+  padding: 30px;
 }
 
 .modal-dialog{
   height: 100%;
+  /////////
+  box-shadow: none;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .modal {

@@ -19,9 +19,9 @@
       <div class="form-container">
           <%= f.input :job_title, label: false, placeholder: 'Quel job recherchez-vous ?' %>
           <%= f.input :city, label: false, placeholder: 'Dans quelle ville ?' %>
-          <%= f.input :contracttype, label: false, placeholder: 'Quel type de contrat ?' %>
+          <%= f.input :contracttype, label: false, prompt: 'Quel type de contrat ?', collection: ["CDI", "CDD", "Stage", "Alternance"] %>
         <%= button_tag :submit, class: "yellow-btn mt-3" do %>
-            <p class="m-0">Let's Swipe !</p>
+            <p class="m-0">Recherchez !</p>
         <% end %>
     <% end %>
 </div>
