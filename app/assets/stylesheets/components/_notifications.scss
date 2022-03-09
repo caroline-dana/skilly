@@ -11,6 +11,20 @@
     right: -2px;
 }
 
+.button-notification-tab-bar {
+  width: 18px;
+  height: 18px;
+  background-color: red;
+  border-radius: 58px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  right: -13px;
+  bottom: 15px;
+  font-size: 13px;
+}
+
 .div-notification{
     position:relative;
 }
