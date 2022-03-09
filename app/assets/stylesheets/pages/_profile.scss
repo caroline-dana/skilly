@@ -85,7 +85,6 @@
   background-color: #F2FF42;
   border-radius: 50px;
   color: #1E2CFB;
-  margin: 20px;
   grid-column: span 2;
   width: 40px;
   height: 40px;
@@ -157,13 +156,16 @@
   left: 0;
 }
 
-.nav-tabs {
-
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  color: white;
+  background-color: #F4F4F4;
+  border-color: #dee2e6 #dee2e6 #F4F4F4;
+  border-radius: 6px;
 }
 
 .nav-link{
-  background-color: red !important;
+  background-color: #1E2CFB !important;
   &.active{
-    background-color: green !important;
+    background-color: #1E2CFB !important;
   }
 }

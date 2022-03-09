@@ -22,42 +22,16 @@
   </div>
 
 
-  <div class='skills'>
+  <div class='skills p-3'>
     <h2>Mes skills</h2>
 
-    <ul class="nav nav-tabs" id="myTab" role="tablist" data-controller="toggle-btn">
+    <ul class="justify-content-between align-items-center nav nav-tabs" id="myTab" role="tablist" data-controller="toggle-btn">
       <li class="nav-item" role="presentation">
         <button data-action="click->toggle-btn#soft" class="nav-link active" id="soft-skills-tab" data-bs-toggle="tab" data-bs-target="#soft-skills" type="button" role="tab" aria-controls="soft-skills" aria-selected="true">Soft Skills</button>
       </li>
       <li class="nav-item" role="presentation">
         <button data-action="click->toggle-btn#hard" class="nav-link" id="hard-skills-tab" data-bs-toggle="tab" data-bs-target="#hard-skills" type="button" role="tab" aria-controls="hard-skills" aria-selected="false">Hard Skills</button>
       </li>
-      <%# <button data-toggle-btn-target="addsoft" type="button" class="btn btn-skills" data-bs-toggle="modal" data-bs-target="#softSkillModal">
-        <i class="fas fa-pen"></i>
-      </button>
-      <button data-toggle-btn-target="addhard" type="button" class="btn btn-skills d-none" data-bs-toggle="modal" data-bs-target="#hardSkillModal">
-        <i class="fas fa-pen"></i>
-      </button> %>
-    </ul>
-
-    <div class="tab-content text-start" id="myTabContent">
-      <div class="tab-pane fade show active" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
-        <ul class= "skills-border" style="list-style: none; padding-left:0px">
-          <% @user.skills.soft_skills.each do |skill| %>
-            <li class="m-1"><%= skill.name %></li>
-          <% end %>
-        </ul>
-      </div>
-      <div class="tab-pane fade" id="hard-skills" role="tabpanel" aria-labelledby="hard-skills-tab">
-        <ul class= "skills-border" style="list-style: none; padding-left:0px">
-          <% @user.skills.hard_skills.each do |skill| %>
-            <li><%= skill.name %></li>
-          <% end %>
-        </ul>
-      </div>
-    </div>
-
-    <ul class="nav nav-tabs" id="myTab" role="tablist" data-controller="toggle-btn">
       <button data-toggle-btn-target="addsoft" type="button" class="btn btn-skills" data-bs-toggle="modal" data-bs-target="#softSkillModal">
         <i class="fas fa-pen"></i>
       </button>
@@ -65,6 +39,23 @@
         <i class="fas fa-pen"></i>
       </button>
     </ul>
+
+    <div class="tab-content text-start" id="myTabContent">
+      <div class="tab-pane fade show active" id="soft-skills" role="tabpanel" aria-labelledby="soft-skills-tab">
+        <ul class= "skills-border py-3" style="list-style: none; padding-left:0px">
+          <% @user.skills.soft_skills.each do |skill| %>
+            <li class="m-1"><%= skill.name %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="tab-pane fade" id="hard-skills" role="tabpanel" aria-labelledby="hard-skills-tab">
+        <ul class= "skills-border py-3" style="list-style: none; padding-left:0px">
+          <% @user.skills.hard_skills.each do |skill| %>
+            <li class="m-1"><%= skill.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
 
   </div>
 </div>
