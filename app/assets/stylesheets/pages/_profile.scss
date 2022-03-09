@@ -10,7 +10,7 @@
 .skill-selector + label {
   cursor: pointer;
   display: inline-block;
-  font-size: 0.7rem;
+  font-size: 13px;
   border-radius: 12px;
   padding: 0.5rem 0.5rem;
   background-color: #EEEFFF;
@@ -30,8 +30,14 @@
 
 .skills {
   background-color: white;
-  border-radius: 19px;
+  border-radius: 12px;
   border: 2px solid blue;
+  height: 328px;
+  width: 326px;
+  & h2{
+    color: blue;
+    font-size: 31px;
+  }
 }
 
 .values {
@@ -74,7 +80,6 @@
 .nav-item {
   color: #F3D0FF;
   border-radius: 15px;
-  margin: 0 5px;
 }
 
 .tab-content {
@@ -86,8 +91,8 @@
   border-radius: 50px;
   color: #1E2CFB;
   grid-column: span 2;
-  width: 40px;
-  height: 40px;
+  width: 33px;
+  height: 33px;
 }
 
 .name-font{
@@ -119,7 +124,9 @@
   width: 44px;
   border-radius: 34px;
   color: #1E2CFB;
-  height: 45px;
+  height: 43px;
+  font-size: 22px;
+  align-items: center;
 }
 
 .modal-title-skills{
@@ -160,12 +167,24 @@
   color: white;
   background-color: #F4F4F4;
   border-color: #dee2e6 #dee2e6 #F4F4F4;
-  border-radius: 6px;
+  border-radius: 6px 6px 0px 0px;
 }
 
 .nav-link{
-  background-color: #1E2CFB !important;
+  background-color: white !important;
+  color: #1E2CFB;
   &.active{
     background-color: #1E2CFB !important;
+    color: white;
   }
+}
+
+.fa-pen:before {
+  content: "\f304";
+  color: #1E2CFB;
+  font-size: 17px;
+  background-color: #F2FF42;
+  border-radius: 50px;
+  width: 44px;
+  height: 44px;
 }
