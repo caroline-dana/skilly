@@ -62,3 +62,8 @@
   top: 0px;
   border-radius: 100%;
 }
+
+.swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
+  background: #1e2cfb1a;
+  backdrop-filter: blur(2px);
+}
