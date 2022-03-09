@@ -22,16 +22,16 @@
 
 .swal2-styled.swal2-confirm {
   color: #1E2CFB !important;
-  background-color: #F2FF42 !important;
+  background-color: #F3D0FF !important;
   font-size: 1em;
   width: 111px;
   height: 48px;
-  border: 2px solid #1E2CFB !important;
-  border-radius: 50px !important;
+  border-radius: 12px !important;
 }
 
 .swal2-html-container{
   color: #1E2CFB !important;
+  font-size: 13px;
 }
 
 .swal-overlay{
@@ -41,7 +41,7 @@
   position:relative;
   border-radius: 15px !important;
   border-radius: 15px !important;
-  background-color: #F3D0FF !important;
+  background-color: #EDEFFE !important;
   max-width: 94% !important;
 }
 .swal2-popup::before {
@@ -66,4 +66,13 @@
 .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
   background: #1e2cfb1a;
   backdrop-filter: blur(2px);
+}
+
+.swal2-container.swal2-center>.swal2-popup {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+  justify-self: center;
+  width: 298px;
+  height: 328px;
 }

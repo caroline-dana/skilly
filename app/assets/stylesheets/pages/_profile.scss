@@ -125,7 +125,6 @@
   border-radius: 34px;
   color: #1E2CFB;
   height: 43px;
-  font-size: 22px;
   align-items: center;
 }
 
@@ -173,9 +172,11 @@
 .nav-link{
   background-color: white !important;
   color: #1E2CFB;
+  opacity: 0.5;
   &.active{
     background-color: #1E2CFB !important;
     color: white;
+    opacity: 1; 
   }
 }
 
