@@ -6,24 +6,25 @@
 
   <div class="container-follow mt-3">
     <h2 class= "dashboard-title">Calls à venir </h2>
-    <div class="card-dashboard d-flex">
-      <% unless @accepted_matches.nil? %>
+    <% unless @accepted_matches.empty? %>
+      <div class="card-dashboard d-flex">
+
         <% @accepted_matches.each do |match| %>
           <div class= "div-notification d-flex align-items-center" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
             <div>
-              <p class="call">16 avril 2022 à 13h00 </p>
-              <p class="call">jusqu'a 14H00</p>
+              <strong><p class="call"> Product Owner </p></strong>
+              <p class="call">14 Mars 2022 - 16h</p>
             </div>
           </div>
         <% end %>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
     <div class="card-dashboard d-flex">
       <img src="https://www.appvizer.fr/media/application/26182/logo/logo-skello.png" />
       <div class="">
-        <p class="call">16 avril 2022 à 13h00 </p>
-        <p class="call">jusqu'a 14H00</p>
+        <strong><p class="call"> Product Manager </p></strong>
+        <p class="call">16 Mars 2022 - 13h</p>
       </div>
     </div>
   </div>
@@ -72,16 +73,16 @@
       </div>
       <div class="modal-body">
           <div class="btn-book">
-            <%= link_to "14/03/21- 16h/16h30", book_date_path %>
+            <%= link_to "14/03/22- 16h/16h30", book_date_path %>
           </div>
           <div class="btn-book">
-            <%= link_to "09/03/21- 14h30/15h", book_date_path %>
+            <%= link_to "15/03/22- 14h30/15h", book_date_path %>
           </div>
           <div class="btn-book">
-            <%= link_to "17/03/21- 10h30/11h", book_date_path %>
+            <%= link_to "17/03/22- 10h30/11h", book_date_path %>
           </div>
           <div class="btn-book">
-            <%= link_to "10/03/21- 15h30/16h", book_date_path %>
+            <%= link_to "21/03/22- 15h30/16h", book_date_path %>
           </div>
            <div class="btn-book btn-delete">
             <%= link_to "Annuler le call", book_date_path %>
