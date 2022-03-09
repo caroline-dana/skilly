@@ -19,21 +19,21 @@
                 <%# <li class="container-li">Soft skills </li> %>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.soft_skills.each do |soft|%>
-                    <div class="skills"><%= soft.name %></div>
+                    <div class="job-skills"><%= soft.name %></div>
                   <% end %>
                 </div>
 
                 <%# <li class="container-li">Hard skills </li> %>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.hard_skills.each do |hard| %>
-                    <div class="skills"><%= hard.name %></div>
+                    <div class="job-skills"><%= hard.name %></div>
                   <% end %>
                 </div>
 
                 <%# <li class="container-li">Les valeurs </li> %>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.values.each do |value|  %>
-                    <div class="skills"><%= value.name %></div>
+                    <div class="job-skills"><%= value.name %></div>
                   <% end %>
                 </div>
 
