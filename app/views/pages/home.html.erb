@@ -10,10 +10,10 @@
  <i class="fa-solid fa-arrow-right-from-bracket"></i>
 
   <div class="d-flex align-items-center" style="align-self: flex-start;">
-      <img class="avatar-home" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
-      <h1 class="hello-title">Hello Aurore</h1>
+    <img class="avatar-home" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
+    <h1 class="hello-title">Hello Aurore</h1>
   </div>
-<p class="hello-paragraph">Trouvez le job de vos rêves</p>
+  <p class="hello-paragraph">Trouvez le job de vos rêves</p>
 
     <%= simple_form_for :search, url: job_offers_path, method: :get, :html=> { class: 'form-inline' } do |f|  %>
       <div class="form-container">
@@ -21,7 +21,6 @@
           <%= f.input :city, label: false, placeholder: 'Dans quelle ville ?' %>
           <%= f.input :contracttype, label: false, placeholder: 'Quel type de contrat ?' %>
         <%= button_tag :submit, class: "yellow-btn mt-3" do %>
-            <%# <i class="fas fa-search"></i> %>
             <p class="m-0">Let's Swipe</p>
         <% end %>
     <% end %>

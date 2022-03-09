@@ -9,3 +9,4 @@ export default class extends Controller {
     this.formTarget.classList.toggle('d-none')
   }
 }
+
