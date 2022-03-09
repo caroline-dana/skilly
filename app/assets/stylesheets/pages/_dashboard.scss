@@ -13,7 +13,7 @@
   background-color:#2A4AFB;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  height:120px;
+  height:80px;
 }
 
 .call {
@@ -35,19 +35,44 @@
 }
 
 .card-dashboard img {
-  height: 57px;
-  width: 58px;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 40px;
 }
 
-.card-dashboard-wait img {
-  height: 57px;
-  width: 58px;
+.card-dashboard-wait {
+
+  padding-left: 15px;
+
+  img {
+  margin-top: 5px;
+  height: 50px;
+  width: 50px;
   object-fit: cover;
   border-radius: 40px;
+  }
 }
 
 .scroll {
- padding-bottom: 50px;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+
+.logo-dashboard {
+  width: 80px;
+  border-radius: 50%;
+  margin: 8px;
+  border: 2px solid #1E2CFB;
+}
+
+.ligne {
+  width: 100%;
+  border-bottom: 1px solid #2A4AFB;
+}
+
+.question-dash {
+  font-style: italic;
+  font-size: 14px;
+  padding-left: 5px;
 }
