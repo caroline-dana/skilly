@@ -31,7 +31,7 @@
 
 .swal2-html-container{
   color: #1E2CFB !important;
-  font-size: 13px;
+  font-size: 13px !important;
 }
 
 .swal-overlay{
@@ -64,8 +64,8 @@
 }
 
 .swal2-container.swal2-backdrop-show, .swal2-container.swal2-noanimation {
-  background: #1e2cfb1a;
-  backdrop-filter: blur(2px);
+  background: #f9fafbcc !important;
+  backdrop-filter: blur(2px) !important;
 }
 
 .swal2-container.swal2-center>.swal2-popup {
