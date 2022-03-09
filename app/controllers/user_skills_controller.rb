@@ -5,7 +5,7 @@ class UserSkillsController < ApplicationController
     @skills.each do |skill|
       @user_skill = UserSkill.create!(skill: skill, user: current_user)
     end
-    redirect_to user_path(@user)
+    redirect_to user_path(@user, skill: "hard")
   end
 
   def destroy
