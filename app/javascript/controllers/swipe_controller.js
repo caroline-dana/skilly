@@ -58,7 +58,6 @@ export default class extends Controller {
       card.style.transform = 'scale(' + (20 - index) / 20 + ') translateY(-' + 30 * index + 'px)';
       card.style.opacity = (10 - index) / 10;
     });
-    console.log('coucou');
     this.element.classList.add('loaded');
   }
 
