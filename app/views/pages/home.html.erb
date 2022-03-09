@@ -1,5 +1,14 @@
-
 <div class="home-container" style="background-color: #F3D0FF;">
+ <%# <%= link_to "SIGN OUT", destroy_user_session_path, method: :delete, class: "ms-5" if current_user%>
+  <div class="logout-icon">
+    <% if current_user %>
+      <%= link_to destroy_user_session_path, method: :delete, class: "ms-5" do %>
+          <i class="fas fa-sign-out-alt"></i>
+      <% end %>
+    <% end %>
+  </div>
+ <i class="fa-solid fa-arrow-right-from-bracket"></i>
+
   <div class="d-flex align-items-center" style="align-self: flex-start;">
       <img class="avatar-home" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
       <h1 class="hello-title">Hello Aurore</h1>
