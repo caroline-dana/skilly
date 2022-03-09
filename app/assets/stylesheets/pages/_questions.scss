@@ -1,10 +1,35 @@
-.form-inline {
+.questions-title {
+  color: #1E2CFB;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.questions-paragraph {
+  font-size: 15px;
+  color: #1E2CFB;
+  margin-bottom: 0px;
+}
+
+.questions-form {
+  margin: auto;
+}
+
+.foobarbaz {
   background-color: none;
   border: 2px solid #F3D0FF;
   border-radius: 6%;
   padding-top: 20px;
   padding-bottom: 50px;
   width: 100%;
+
+  .text {
+    color: #1E2CFB;
+    text-align: center;
+    font-size: 15px;
+  }
 
   .form-control {
     color: #1E2CFB;
@@ -27,6 +52,7 @@
       text-align: center;
       background-color: transparent;
       font-weight: 300;
+      text-align: center;
     }
     &:focus{
       box-shadow: none;
@@ -41,7 +67,7 @@
     border: none;
   }
 
-  .yellow-btn {
+  .btn {
     border: 2px solid #F0F643;
     font-weight: 500;
     color: #1E2CFB;

@@ -1,19 +1,18 @@
-<div class="h-100" style="background-color: #F3D0FF; padding-top: 20px;">
-  <div class="card-container">
-    <div class="d-flex align-items-center my-2" style="align-self: flex-start;">
-        <img class="avatar-home" alt="avatar-large" src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138">
-        <h1 class="questions-title ms-2">Questions</h1>
-    </div>
-  <p class="questions-paragraph mt-3">Aidez votre recruteur à vous connaître en quelques mots en répondant à ces questions :</p>
+<div class="home-container" style="background-color: #F3D0FF;">
+  <div class="d-flex align-items-center" style="align-self: flex-start;">
+      <img class="avatar-home" alt="avatar-large" src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138">
+      <h1 class="questions-title">Questions</h1>
+  </div>
+  <p class="questions-paragraph">Aidez votre recruteur à vous connaître en quelques mots en répondant à ces questions :</p>
 
-      <div class="questions-form">
-        <%= simple_form_for @match, :html=> { class: 'foobarbaz' } do |f| %>
+      <%= simple_form_for @match, :html=> { class: 'foobarbaz' } do |f| %>
+        <div class="form-container">
           <%= f.input :answer1, label: @match.job_offer.question1 %>
           <%= f.input :answer2, label: @match.job_offer.question2 %>
           <%= f.input :answer3, label: @match.job_offer.question3 %>
           <%= f.submit "Envoyer", class: "btn" %>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
