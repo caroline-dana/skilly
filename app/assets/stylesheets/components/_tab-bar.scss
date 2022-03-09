@@ -13,6 +13,22 @@
     z-index: 10000;
     box-shadow: 0px 0px 5px #1e2cfb1a;
     margin: auto;
+    .fas {
+      color: #9da3fe;
+      font-size: 19px;
+    }
+    .fas.fa-home{
+      margin-left: 25px;
+    }
+
+    .fas.fa-user{
+      margin-right: 25px;
+    }
+
+    .active-icon {
+      color:#1E2CFB;
+    }
+
 }
 
 a {
@@ -23,21 +39,4 @@ a {
 a, a:hover, a:focus, a:active {
   text-decoration: none;
   color: inherit;
-}
-
-.fas {
-  color: #9da3fe;
-  font-size: 19px;
-}
-
-.fas.fa-home{
-  margin-left: 25px;
-}
-
-.fas.fa-user{
-  margin-right: 25px;
-}
-
-.active-icon {
-  color:#1E2CFB;
 }
