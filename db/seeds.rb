@@ -123,19 +123,19 @@ soft_skill_15 = Skill.create(name: "Motivation", category: "soft_skill")
 
 hard_skill_1 = Skill.create(name: "Software development", category: "hard_skill")
 hard_skill_2 = Skill.create(name: "Bases User Stories", category: "hard_skill")
-hard_skill_3 = Skill.create(name: "Methodologie Agile", category: "hard_skill")
+hard_skill_3 = Skill.create(name: "Agile", category: "hard_skill")
 hard_skill_4 = Skill.create(name: "SCRUM", category: "hard_skill")
 hard_skill_5 = Skill.create(name: "Data analysis", category: "hard_skill")
 hard_skill_6 = Skill.create(name: "CRM", category: "hard_skill")
 hard_skill_7 = Skill.create(name: "Relation Client", category: "hard_skill")
 hard_skill_8 = Skill.create(name: "Vente", category: "hard_skill")
-hard_skill_9 = Skill.create(name: "Business Stratégie", category: "hard_skill")
+hard_skill_9 = Skill.create(name: "Stratégie", category: "hard_skill")
 hard_skill_10 = Skill.create(name: "Ruby on Rails", category: "hard_skill")
 hard_skill_11 = Skill.create(name: "Front-end HTML CSS JS", category: "hard_skill")
-hard_skill_12 = Skill.create(name: "Business developement", category: "hard_skill")
+hard_skill_12 = Skill.create(name: "Business development", category: "hard_skill")
 hard_skill_13 = Skill.create(name: "Pack office", category: "hard_skill")
 hard_skill_14 = Skill.create(name: "Python", category: "hard_skill")
-hard_skill_15 = Skill.create(name: "Marketing produit", category: "hard_skill")
+hard_skill_15 = Skill.create(name: "Marketing", category: "hard_skill")
 
 value_1 = Skill.create(name: "Loyauté", category: "values")
 value_2 = Skill.create(name: "Bienveillance", category: "values")
@@ -242,7 +242,7 @@ job_offer_3.save!
 # 360 Learning
 job_offer_4 = JobOffer.new(
   job_title: "Product Owner",
-  company: company_3,
+  company: company_4,
   city: "Paris",
   contracttype: "CDI",
   description: "Notre équipe Produit est composée de Product Managers et Product Owners. Chaque Product Manager travaille avec un Product Designer et 3 à 6 Software Engineers sur une feuille de route ambitieuse. Les Product Managers s'engagent à maintenir notre avance en matière d'apprentissage collaboratif.
@@ -315,12 +315,12 @@ puts 'seeding job offers done'
 
 puts 'seeding job skills'
 [job_offer_1, job_offer_2, job_offer_3, job_offer_4, job_offer_6].each do |job_offer|
-  [soft_skill_4, soft_skill_5, soft_skill_6, hard_skill_1, hard_skill_2, hard_skill_3, value_4, value_5, value_6,].each do |skill|
+  [soft_skill_4, soft_skill_5, soft_skill_13, hard_skill_14, hard_skill_15, hard_skill_3, value_4, value_5, value_6,].each do |skill|
     JobSkill.create(job_offer: job_offer, skill: skill)
   end
 end
 
-[soft_skill_1, soft_skill_2, soft_skill_3, hard_skill_7, hard_skill_9, hard_skill_13, value_1, value_2, value_3].each do |skill|
+[soft_skill_7, soft_skill_2, soft_skill_3, hard_skill_6, hard_skill_8, hard_skill_9, value_1, value_2, value_3].each do |skill|
   JobSkill.create(job_offer: job_offer_5, skill: skill)
 end
 puts 'seeding job skills done'
