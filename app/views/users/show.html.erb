@@ -33,10 +33,10 @@
         <button data-action="click->toggle-btn#hard" class="nav-link <%="active" if params[:skill]%>" id="hard-skills-tab" data-bs-toggle="tab" data-bs-target="#hard-skills" type="button" role="tab" aria-controls="hard-skills" aria-selected="false">Hard Skills</button>
       </li>
       <button data-toggle-btn-target="addsoft" type="button" class="btn btn-skills" data-bs-toggle="modal" data-bs-target="#softSkillModal">
-        <i class="fas fa-pen"></i>
+        <%= '+' %>
       </button>
       <button data-toggle-btn-target="addhard" type="button" class="btn btn-skills d-none" data-bs-toggle="modal" data-bs-target="#hardSkillModal">
-        <i class="fas fa-pen"></i>
+        <%= '+' %>
       </button>
     </ul>
 
@@ -74,7 +74,7 @@
 
       </div>
       <div class="modal-footer">
-        <%= f.submit "+", class: "btn btn-new-skills" %>
+        <%= f.submit "Ajouter", class: "btn btn-new-skills" %>
       </div>
             <% end %>
 
@@ -95,7 +95,7 @@
           <%= f.input :skill, collection: Skill.where(category: "hard_skill").reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "my-3 skill-selector" },
                 item_wrapper_class: 'skill-item' %>
       <div class="modal-footer">
-        <%= f.submit "+", class: "btn btn-new-skills" %>
+        <%= f.submit "Ajouter", class: "btn btn-new-skills" %>
       </div>
               <% end %>
     </div>
