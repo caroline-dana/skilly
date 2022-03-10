@@ -177,7 +177,6 @@ job_offer_1 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "En tant que chef de produit pour l'automatisation du marketing, vous serez chargé de construire les meilleurs outils du secteur pour soutenir nos efforts d'acquisition. Intégré dans une équipe, travaillant avec des ingénieurs seniors et des data scientists, vous devrez construire l'avenir de nos outils de marketing. Vous serez responsable de l'ensemble du projet, de la définition de la stratégie à la feuille de route et à l'expédition des fonctionnalités.
-  Vos missions:
   - Recueillir des insights sur les problématiques Marketing et les traduire en opportunités actionnables qui permettraient d'améliorer leurs performances.
   - Définir la stratégie et l'ambition associée
   - Construire la feuille de route associée pour la réaliser
@@ -201,7 +200,6 @@ job_offer_2 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "En tant que premier Product Owner de l'équipe, vous jouerez un rôle clé dans l'évolution de notre stratégie de croissance et aurez l'opportunité d'apporter de la valeur à Skello dès le premier jour !
-  Vos missions :
   - Analyser nos performances : vous identifiez les principaux et pain points sur nos chemins de conversion avec des données qualitatives & quantitatives et mesurez l'impact de nouvelles actions.
   - Définir la feuille de route de conversion du site web/des landings: vous identifiez & priorisez les projets, fonctionnalités & idées pertinentes pour augmenter notre conversion pour nos 5 marchés (France, Espagne, Allemagne, Suisse & Belgique).
   - Améliorer les KPI de conversion : vous développez une méthode de test A/B pour tester de nouvelles idées, obtenir des insights et améliorer continuellement les taux de conversion du site web (landing pages), mais aussi sur notre produit (post sign-up).",
@@ -223,7 +221,6 @@ job_offer_3 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "En tant que Product Owner, vous serez le garant du développement des fonctionnalités de l'équipe et menerez votre équipe vers la réalisation des objectifs de votre roadmap.
-  Les missions:
   - Gérer et prioriser votre roadmap en collaboration avec le CPO et le Senior Product Manager.
   - En partenariat avec les Product Designers, mener des initiatives de découverte de produits pour identifier et comprendre en profondeur les besoins, les pain points des utilisateurs, les opportunités pour Pelico.
   - Imaginer des fonctionnalités pour répondre à notre vision et aux besoins des clients tout en assurant la conformité avec la feuille de route du produit.
@@ -246,7 +243,6 @@ job_offer_4 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "Notre équipe Produit est composée de Product Managers et Product Owners. Chaque Product Manager travaille avec un Product Designer et 3 à 6 Software Engineers sur une feuille de route ambitieuse. Les Product Managers s'engagent à maintenir notre avance en matière d'apprentissage collaboratif.
-  Les missions:
   - Rédiger les spécifications des fonctionnalités et les user stories
   - Gérer la roadmap et le product backlog de votre équipe.
   - Assurer la livraison efficace et en temps voulu des nouvelles fonctionnalités
@@ -270,7 +266,6 @@ job_offer_5 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "Au sein de l'équipe produit, vous travaillerez sur un périmètre dédié de fonctionnalités et avec de nombreuses équipes de l'entreprise (data, juridique, marketing, tech, opérations...) pour améliorer la valeur apportée aux utilisateurs par vos fonctionnalités.
-  Les missions :
   - Comprendre les utilisateurs via des analyses de marché, des entretiens avec les utilisateurs, des analyses comportementales et une collaboration avec les équipes du service client et des ventes.
   - Surveiller les performances et la convivialité des fonctionnalités à l'aide d'analyses.
   - Communiquer en interne sur vos fonctionnalités, leurs évolutions et la vision du produit qu'elles portent.
@@ -294,7 +289,6 @@ job_offer_6 = JobOffer.new(
   city: "Paris",
   contracttype: "CDI",
   description: "Au sein de l'équipe produit, vous travaillerez sur un périmètre dédié de fonctionnalités et avec de nombreuses équipes de l'entreprise (data, juridique, marketing, tech, opérations...) pour améliorer la valeur apportée aux utilisateurs par vos fonctionnalités.
-  Les missions :
   - Comprendre les utilisateurs via des analyses de marché, des entretiens avec les utilisateurs, des analyses comportementales et une collaboration avec les équipes du service client et des ventes.
   - Surveiller les performances et la convivialité des fonctionnalités à l'aide d'analyses.
   - Communiquer en interne sur vos fonctionnalités, leurs évolutions et la vision du produit qu'elles portent.
