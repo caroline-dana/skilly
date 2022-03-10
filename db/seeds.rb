@@ -32,7 +32,7 @@ company_1 = Company.create(
   recruiter_message: "Si tu es un team pleayer qui veut changer le futur de la mobilité, rejoins-nous !"
 )
 
-file = get_image("logo-blablacar.png")
+file = get_image("blablacar.png")
 company_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 company_1.save!
 
@@ -190,7 +190,7 @@ job_offer_1 = JobOffer.new(
   question3: "Comment validez-vous une nouvelle UX ou interface ?"
 )
 
-file = get_image("logo-blablacar.png")
+file = get_image("blablacar.png")
 job_offer_1.photo.attach(io: file, filename: 'nes.png', content_type: 'image/png')
 job_offer_1.save!
 
