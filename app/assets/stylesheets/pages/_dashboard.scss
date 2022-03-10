@@ -1,10 +1,15 @@
 .dashboard-title {
-  font-size: calc(0.800rem + 0.9vw);
+  font-size: 17px;
   font-weight: 500;
-  margin-top: 15px;
-  margin-left: 20px;
-  margin-bottom: 5px;
   color: #2A4AFB;
+  margin-bottom: 12px;
+}
+
+.question-dash {
+  font-style: italic;
+  font-size: 14px;
+  color: #9da3fe;
+  margin-bottom: 0;
 }
 
 .top-dasboard {
@@ -25,40 +30,37 @@
 
 .card-dashboard {
   overflow: hidden;
-  background: #F7F7FF;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background: transparent;
+  // box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   align-items: center;
   padding: 20px;
-  margin: 15px;
-  border-radius: 12px;
+  border-radius: 6px;
   border: 2px solid #2A4AFB;
-  height: 70px;
+  height: 9vh;
 }
 
 .card-dashboard img {
   height: 50px;
   width: 50px;
   object-fit: cover;
-  border-radius: 40px;
+  border-radius: 15px;
 }
 
 .card-dashboard-wait {
 
-  padding-left: 15px;
-
   img {
   margin-top: 5px;
-  height: 50px;
-  width: 50px;
+  height: 45px;
+  width: 45px;
   object-fit: cover;
   border-radius: 40px;
   }
 }
 
-.scroll {
-  padding-bottom: 50px;
-  padding-top: 50px;
-}
+// .scroll {
+//   // padding-bottom: 50px;
+//   // padding-top: 50px;
+// }
 
 .logo-dashboard {
   width: 80px;
@@ -83,3 +85,4 @@
   margin-left: 29px;
   color: #2A4AFB;
 }
+
