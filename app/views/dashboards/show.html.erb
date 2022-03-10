@@ -1,12 +1,14 @@
-<div class="scroll" style="background-color: #F3D0FF;">
-    <h1 style="color:white; margin-left: 15px; color: #2A4AFB;"><strong>Dashboard</strong></h1>
-    <div class="ligne"></div>
-    <div class="container-follow-3">
-      <h2 class= "dashboard-title">Appels à planifier</h2>
-      <div class="card-dashboard-wait d-flex justify-content-start">
+<div class="scroll" style="background-color: #F3D0FF; padding: 60px 35px;">
+    <div class="d-flex align-items-center mb-4" style="align-self: flex-start;">
+      <img class="avatar-home" alt="avatar-large" src="https://avatars.githubusercontent.com/u/95220236?v=4">
+      <h1 class="hello-title">Mon Dashboard</h1>
+    </div>
 
+    <div class="container-follow-3">
+      <h2 class= "dashboard-title">Mes appels à planifier</h2>
+      <div class="card-dashboard-wait d-flex justify-content-start">
         <% if @validating_matches.empty?  %>
-        <p class="question-dash">Vous n'avez pas de question validées</p>
+        <p class="question-dash">Vous n'avez pas de questions validées</p>
         <% else  %>
           <% @validating_matches.each do | match | %>
             <div class= "div-notification" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -15,15 +17,12 @@
             </div>
           <% end %>
         <% end %>
-
       </div>
     </div>
-
     <div class="container-follow mt-3">
-      <h2 class= "dashboard-title">Appels confirmés </h2>
+      <h2 class= "dashboard-title">Mes appels confirmés </h2>
       <% unless @accepted_matches.empty? %>
         <div class="card-dashboard d-flex">
-
           <% @accepted_matches.each do |match| %>
             <div class= "div-notification d-flex align-items-center" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
@@ -38,14 +37,12 @@
     <div class="card-dashboard d-flex">
      <img src="https://backoffice.ccistore.fr/uploads/eservice/logo/1611934131450.png" />
       <div>
-        <strong><p class="call"> Product Manager </p></strong>
+        <p class="call"> Product Manager </p>
         <p class="call">16 Mars 2022 - 13h</p>
       </div>
     </div>
-
-
     <div class="calendar-container mt-4">
-    <h2 class= "dashboard-title">Mon agenda </h2>
+    <%# <h2 class= "dashboard-title">Mon agenda </h2> %>
       <%= month_calendar(events: @matches, attribute: :callbooking) do |day , match| %>
       <%= day %>
       <%='Pulp' if day == 16 %>
@@ -61,7 +58,7 @@
     <div class="modal-dialog m-0">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Veuillez sélectionner un horaire</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sélectionnez un horaire</h5>
         </div>
         <div class="modal-body">
             <div class="btn-book">
@@ -76,12 +73,9 @@
             <div class="btn-book">
               <%= link_to "21/03/22- 15h30/16h", book_date_path %>
             </div>
-            <div class="btn-book btn-delete">
-              <%= link_to "Annuler le call", book_date_path %>
+            <div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
             </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
         </div>
       </div>
     </div>
