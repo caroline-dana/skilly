@@ -94,23 +94,11 @@ export default class extends Controller {
           console.log('lol')
         }
 
-        if (event.additionalEvent === 'panleft') {
-          this.dislikeTarget.style.opacity = 1
-          this.likeTarget.style.opacity = 0
-
-          this._resetIcons()
-        } else {
-          this.dislikeTarget.style.opacity = 0
-          this.likeTarget.style.opacity = 1
-
-          this._resetIcons()
-        }
-
         el.classList.add('moving');
-        el.classList.toggle('tinder_love', event.deltaX > 0);
-        el.classList.toggle('tinder_nope', event.deltaX < 0);
       }
       if (this.swipeHorizontal === true) {
+        el.classList.toggle('tinder_love', event.deltaX > 0);
+        el.classList.toggle('tinder_nope', event.deltaX < 0);
         const rotate = event.deltaX * 0.03 * event.deltaY / 80;
         console.log()
         event.target.style.transform = `translate(${event.deltaX}px, ${event.deltaY}px) rotate(${rotate}deg)`;
@@ -148,7 +136,7 @@ export default class extends Controller {
         const yMulti = event.deltaY / 80;
         const rotate = xMulti * yMulti;
 
-        event.target.style.transform = `translate(${toX}px, ${toY + event.deltaY}px) rotate(${rotate}deg)`;
+        event.target.style.transform = `translate(${toX * 2}px, ${toY + event.deltaY}px) rotate(${rotate}deg)`;
         this._initCards();
       }
     });
