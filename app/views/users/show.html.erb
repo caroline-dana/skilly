@@ -23,7 +23,7 @@
 
 
   <div class='skills p-3'>
-    <h2>Mes skills</h2>
+    <h2 class="pb-2">Mes skills</h2>
 
     <ul class="justify-content-between align-items-center nav nav-tabs" id="myTab" role="tablist" data-controller="toggle-btn">
       <li class="nav-item" role="presentation">
@@ -73,7 +73,7 @@
                     item_wrapper_class: 'skill-item' %>
 
       </div>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <%= f.submit "Ajouter", class: "btn btn-new-skills" %>
       </div>
             <% end %>
@@ -94,7 +94,7 @@
         <%= simple_form_for @user_skill do |f| %>
           <%= f.input :skill, collection: Skill.where(category: "hard_skill").reject{|skill| UserSkill.find_by(skill: skill, user: current_user)}, as: :check_boxes, input_html: { class: "my-3 skill-selector" },
                 item_wrapper_class: 'skill-item' %>
-      <div class="modal-footer">
+      <div class="modal-footer justify-content-center">
         <%= f.submit "Ajouter", class: "btn btn-new-skills" %>
       </div>
               <% end %>
