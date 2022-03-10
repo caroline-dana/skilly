@@ -32,10 +32,10 @@
       <li class="nav-item" role="presentation">
         <button data-action="click->toggle-btn#hard" class="nav-link <%="active" if params[:skill]%>" id="hard-skills-tab" data-bs-toggle="tab" data-bs-target="#hard-skills" type="button" role="tab" aria-controls="hard-skills" aria-selected="false">Hard Skills</button>
       </li>
-      <button data-toggle-btn-target="addsoft" type="button" class="btn btn-skills" data-bs-toggle="modal" data-bs-target="#softSkillModal">
+      <button data-toggle-btn-target="addsoft" type="button" class="btn btn-skills align-items-center d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#softSkillModal">
         <%= '+' %>
       </button>
-      <button data-toggle-btn-target="addhard" type="button" class="btn btn-skills d-none" data-bs-toggle="modal" data-bs-target="#hardSkillModal">
+      <button data-toggle-btn-target="addhard" type="button" class="align-items-center btn btn-skills d-flex justify-content-center d-none" data-bs-toggle="modal" data-bs-target="#hardSkillModal">
         <%= '+' %>
       </button>
     </ul>
