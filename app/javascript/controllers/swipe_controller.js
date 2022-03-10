@@ -11,6 +11,9 @@ export default class extends Controller {
     this._initCards();
     this._initSwipe();
 
+    this.swipeHorizontal = false;
+    this.swipeVertical   = false;
+
     this.likeEvent = new Event('liked');
     this.dislikeEvent = new Event('disliked');
   }
@@ -59,6 +62,8 @@ export default class extends Controller {
       card.style.opacity = (10 - index) / 10;
     });
     this.element.classList.add('loaded');
+    this.swipeHorizontal = false;
+    this.swipeVertical = false;
   }
 
   _initSwipe() {
@@ -73,31 +78,52 @@ export default class extends Controller {
 
   _listenToPan(hammertime, el) {
     hammertime.on('pan', (event) => {
-      if (event.deltaX === 0 || event.center.x === 0 && event.center.y === 0) return;
+      console.log(event.deltaX, event.deltaY)
+      if (this.swipeHorizontal === false && this.swipeVertical === false)  {
+        console.log('ca commence a pan')
+        if (event.deltaX === 0 || event.center.x === 0 && event.center.y === 0) return;
+        if (event.deltaY > 60 || event.deltaY < -60) {
+          this.swipeVertical = true
+          return;
+        }
+        window.lol = event
 
-      // if (event.additionalEvent === 'panleft') {
-      //   this.dislikeTarget.style.opacity = 1
-      //   this.likeTarget.style.opacity = 0
+        if (event.deltaX > 60 || event.deltaX < -60) {
+          this._forbidScroll(el)
+          this.swipeHorizontal = true
+          console.log('lol')
+        }
 
-      //   this._resetIcons()
-      // } else {
-      //   this.dislikeTarget.style.opacity = 0
-      //   this.likeTarget.style.opacity = 1
+        if (event.additionalEvent === 'panleft') {
+          this.dislikeTarget.style.opacity = 1
+          this.likeTarget.style.opacity = 0
 
-      //   this._resetIcons()
-      // }
+          this._resetIcons()
+        } else {
+          this.dislikeTarget.style.opacity = 0
+          this.likeTarget.style.opacity = 1
 
-      el.classList.add('moving');
-      el.classList.toggle('tinder_love', event.deltaX > 0);
-      el.classList.toggle('tinder_nope', event.deltaX < 0);
+          this._resetIcons()
+        }
 
-      const rotate = event.deltaX * 0.03 * event.deltaY / 80;
-      event.target.style.transform = `translate(${event.deltaX}px, ${event.deltaY}px) rotate(${rotate}deg)`;
+        el.classList.add('moving');
+        el.classList.toggle('tinder_love', event.deltaX > 0);
+        el.classList.toggle('tinder_nope', event.deltaX < 0);
+      }
+      if (this.swipeHorizontal === true) {
+        const rotate = event.deltaX * 0.03 * event.deltaY / 80;
+        console.log()
+        event.target.style.transform = `translate(${event.deltaX}px, ${event.deltaY}px) rotate(${rotate}deg)`;
+      }
     });
   }
 
   _listenToPanEnd(hammertime, el) {
     hammertime.on('panend', (event) => {
+      console.log('jai lache')
+      this.swipeHorizontal = false;
+      this.swipeVertical = false;
+      this._enableScroll(el)
       el.classList.remove('moving', 'tinder_love', 'tinder_nope');
 
       const moveOutWidth = document.body.clientWidth;
@@ -153,5 +179,13 @@ export default class extends Controller {
       this.likeTarget.style.opacity = 0
       this.dislikeTarget.style.opacity = 0
     }, 500);
+  }
+
+  _forbidScroll(card) {
+    card.style.overflow = 'hidden'
+  }
+
+  _enableScroll(card) {
+    card.style.overflow = 'scroll'
   }
 }

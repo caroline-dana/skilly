@@ -7,10 +7,10 @@
           <div class="like-icon liked-unlike" data-swipe-target="like"><i class="check-icon fas fa-check"></i></div>
           <div class="unlike-icon liked-unlike" data-swipe-target="dislike"><i class="cross-icon fas fa-times"></i></div>
             <div class="container-head">
-            <div>
-              <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
-              <p class="title-index-company"><%= job_offer.company.name %></p>
-            </div>
+              <div>
+                <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
+                <p class="title-index-company"><%= job_offer.company.name %></p>
+              </div>
               <%= cl_image_tag job_offer.photo.key, class:"avatar-head" %>
             </div>
 
