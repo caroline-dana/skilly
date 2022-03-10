@@ -1,25 +1,24 @@
 .title-index-job {
   color: #1E2CFB;
   font-family: "Sora", "sans-serif";
-  font-size: 33px;
+  font-size: 28px;
   margin-top: 30px;
-  margin-left: 7px;
+  margin-left: 20px;
+  line-height: 1.1;
 }
 
 .title-index-company {
   color: #1E2CFB;
   font-family: "Sora", "sans-serif";
-  font-size: 22px;
-  margin-top: -16px;
-  margin-left: 7px;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-left: 20px;
 }
 
 .job-skills {
-  // border: 1px solid #1e2dfb2d;
-  background-color: #1e2dfb2d;
   margin-left: 3px;
   margin-right: 2px;
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 7px;
   font-size: 15px;
   color: #1E2CFB;
@@ -30,11 +29,27 @@
   color: #1E2CFB;
   margin-left: -2px;
   margin-right: 2px;
-  padding: 7px;
+  padding: 4px;
   font-size: 14px;
   text-align: justify;
+  margin-top: -9px;
 }
 
 .no-puce {
   list-style-type: none;
+}
+
+.title-skills {
+  color: #1E2CFB;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 7px;
+}
+
+.title-skills-missions {
+  color: #1E2CFB;
+  font-size: 12px;
+  font-weight: 300;
+  margin-bottom: 7px;
+  margin-top: 50px;
 }

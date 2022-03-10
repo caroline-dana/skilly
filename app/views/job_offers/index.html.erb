@@ -16,6 +16,7 @@
 
             <ul style="list-style: none;padding: 8px;margin: 15px;">
                 <%# <li class="container-li">Soft skills </li> %>
+                <p class="title-skills">Soft skills</p>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.soft_skills.each do |soft|%>
                     <div class="job-skills"><%= soft.name %></div>
@@ -23,6 +24,7 @@
                 </div>
 
                 <%# <li class="container-li">Hard skills </li> %>
+                 <p class="title-skills">Hard skills</p>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.hard_skills.each do |hard| %>
                     <div class="job-skills"><%= hard.name %></div>
@@ -30,13 +32,14 @@
                 </div>
 
                 <%# <li class="container-li">Les valeurs </li> %>
+                 <p class="title-skills">Valeurs</p>
                 <div class="container-skill d-flex justify-content-start">
                   <% job_offer.values.each do |value|  %>
                     <div class="job-skills"><%= value.name %></div>
                   <% end %>
                 </div>
 
-
+                <p class="title-skills-missions">Vos missions</p>
                 <% job_offer.description.split('-').each_with_index do |word, index| %>
                   <% if index == 0 %>
                     <p  class="job-description"><%= word %></p>
