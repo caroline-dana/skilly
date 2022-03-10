@@ -91,9 +91,13 @@
 .btn-skills{
   background-color: #F2FF42;
   border-radius: 50px;
-  color: #1E2CFB;
+  color: blue;
   grid-column: span 2;
-  height: 33px;
+  height: 37px;
+  width: 37px;
+  font-size: 26px;
+  margin: 0px 0px;
+  border: 2px solid blue;
 }
 
 .name-font{
@@ -169,7 +173,12 @@
   color: white;
   background-color: #F4F4F4;
   border-color: #dee2e6 #dee2e6 #F4F4F4;
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 6px 6px;
+  border-bottom: 0px solid transparent !important;
+}
+
+.nav-tabs {
+  border-bottom: 0px solid transparent !important;
 }
 
 .nav-link{

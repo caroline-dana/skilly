@@ -61,7 +61,7 @@
     <div class="modal-dialog m-0">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Veuillez sélectionner un horaire</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Sélectionnez un horaire</h5>
         </div>
         <div class="modal-body">
             <div class="btn-book">
@@ -76,12 +76,9 @@
             <div class="btn-book">
               <%= link_to "21/03/22- 15h30/16h", book_date_path %>
             </div>
-            <div class="btn-book btn-delete">
-              <%= link_to "Annuler le call", book_date_path %>
+            <div>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
             </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
         </div>
       </div>
     </div>

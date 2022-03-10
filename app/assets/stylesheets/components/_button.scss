@@ -18,6 +18,7 @@
   border-color: #6a7ad3;
   border-radius: 30px;
   margin-bottom: 15px;
+  font-family: "Sora", "sans-serif";
 }
 
 .modal-body {
@@ -26,13 +27,16 @@
   padding: 3rem;
   top: -7px;
   left: 5px;
-  margin-top: -12px;
-  margin-bottom: -31px;
+  margin-top: -40px;
 }
 
 .btn-secondary{
-  color: black;
-  background-color: pink;
+  color: #1E2CFB;
+  background-color: #F3D0FF;
+  border-radius: 6px;
+  border: 2px solid #F3D0FF;
+  margin-left: 220px;
+  margin-top: 20px
 }
 
 .btn-outline-primary{
@@ -59,13 +63,13 @@
 }
 
 .btn-book{
-  color: #fff;
-  background-color: #8385ee;
+  color: #1E2CFB;
   border-color: #6a7ad3;
-  border-radius: 30px;
+  border: 2px solid #1E2CFB;
+  border-radius: 6px;
   text-align: center;
   padding: 10px;
-  margin: 10px 0;
+  margin: 20px 0;
 }
 
 .btn-info-swipe {
