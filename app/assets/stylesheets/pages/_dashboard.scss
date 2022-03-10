@@ -26,12 +26,13 @@
 .card-dashboard {
   overflow: hidden;
   background: #F7F7FF;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
   align-items: center;
   padding: 20px;
   margin: 15px;
-  border-radius: 25px;
+  border-radius: 12px;
+  border: 2px solid #2A4AFB;
+  height: 70px;
 }
 
 .card-dashboard img {
@@ -75,4 +76,5 @@
   font-style: italic;
   font-size: 14px;
   padding-left: 5px;
+    color: #9da3fe;
 }
