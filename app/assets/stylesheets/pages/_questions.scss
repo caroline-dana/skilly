@@ -12,6 +12,7 @@
   color: #1E2CFB;
   margin-bottom: 0px;
   margin-top: 20px;
+  font-weight: 200;
 }
 
 .questions-form {
@@ -19,19 +20,16 @@
 }
 
 .foobarbaz {
-  background-color: none;
-  border: 2px solid #F3D0FF;
-  border-radius: 6%;
-  padding-top: 20px;
-  padding-bottom: 50px;
-  width: 100%;
-  margin-bottom: -40px;
+  color: #1E2CFB;
+  font-weight: 400;
+  text-align: center;
+  height: 100%;
 
   .text {
     color: #1E2CFB;
     text-align: center;
-    font-size: 15px;
-    font-weight: 200;
+    font-size: 13px;
+    font-weight: 600;
   }
 
   .form-control {
