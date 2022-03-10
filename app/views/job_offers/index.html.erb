@@ -4,8 +4,8 @@
     <div class="cards-container justify-content-around">
       <% @job_offers.each do |job_offer| %>
         <div class="job-offer-card" data-swipe-target="card" data-id="<%= job_offer.id %>">
-          <div class="like-icon liked-unlike" data-swipe-target="like"><i class="check-icon fas fa-check"></i></div>
-          <div class="unlike-icon liked-unlike" data-swipe-target="dislike"><i class="cross-icon fas fa-times"></i></div>
+          <div class="like-icon liked-unlike"><i class="check-icon fas fa-check" data-swipe-target="like"></i></div>
+          <div class="unlike-icon liked-unlike"><i class="cross-icon fas fa-times" data-swipe-target="dislike"></i></div>
             <div class="container-head">
               <div>
                 <p class="title-index-job"><strong><%= job_offer.job_title %></strong></p>
