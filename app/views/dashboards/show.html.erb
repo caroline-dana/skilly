@@ -11,7 +11,7 @@
         <p class="question-dash">Vous n'avez pas de questions validées</p>
         <% else  %>
           <% @validating_matches.each do | match | %>
-            <div class= "div-notification" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class= "div-notification" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <div class= "button-notification"> 1 </div>
               <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
             </div>
@@ -24,7 +24,7 @@
       <% unless @accepted_matches.empty? %>
         <div class="card-dashboard d-flex">
           <% @accepted_matches.each do |match| %>
-            <div class= "div-notification d-flex align-items-center" type = "button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class= "div-notification d-flex align-items-center" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
               <img src="https://files.helpdocs.io/zqc32mkmew/logo.png?t=1608128023138"/>
               <div>
                 <strong><p class="call"> Product Owner </p></strong>
